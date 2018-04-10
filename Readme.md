@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анастасия Меркулова](https://up.htmlacademy.ru/adaptive/14/user/664403).
-* Наставник: [Филипп Шамсиев](https://htmlacademy.ru/profile/toolx).
+* Наставник: [Филипп Шамсиев](https://up.htmlacademy.ru/adaptive/14/user/70260).
 
 ---
 
