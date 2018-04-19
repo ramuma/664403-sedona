@@ -1,13 +1,16 @@
-.advantages-list__item--true,
+/*.advantages-list__item--true,
 .advantages-list__item--bridge {
     background-color: @color-main;
     color: @white;
-}
+}*/
 
-.advantages-list__item--small,
-.advantages-list__item--road,
-.advantages-list__item--empty {
+.advantages-list__item {
+    background-color: @color-main;
+    color: @white;
+  &--small,
+  &--road,
+  &--empty {
     background-color: #eeeeee;
-    padding: 0;
-    margin: 0;
+    color: @black;
+}
 }
