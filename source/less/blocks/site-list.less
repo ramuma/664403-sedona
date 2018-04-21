@@ -5,14 +5,16 @@
 
 .site-list__item {
   display: inline-block;
-  vertical-align: center;
-  background-color: @color-main;
-  font-size: 18px;
-  line-height: 40px;
-  font-weight: bold;
+  min-width: 320px;
   padding-top: 8px;
   padding-bottom: 8px;
-  min-width: 320px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+  vertical-align: center;
+
+  background-color: @color-main;
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
 
@@ -22,12 +24,13 @@
 
   &:focus,
   &:active {
-    background-color: @color-main--down;
     color: #99cccc;
+
+    background-color: @color-main--down;
   }
 }
 
 .site-list__link {
-  text-decoration: none;
   color: @white;
+  text-decoration: none;
 }
