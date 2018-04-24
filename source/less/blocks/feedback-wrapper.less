@@ -6,3 +6,35 @@
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .feedback-wrapper--impression {
+    order: 1;
+    width: 324px;
+  }
+
+  .feedback-wrapper--name {
+    order: 2;
+    width: 324px;
+  }
+
+  .feedback-wrapper--contact {
+    order: 3;
+    width: 648px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback-wrapper--impression {
+    width: 400px;
+  }
+
+  .feedback-wrapper--name {
+    width: 400px;
+  }
+
+  .feedback-wrapper--contact {
+    width: 648px;
+  }
+}
