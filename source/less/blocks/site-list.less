@@ -24,13 +24,83 @@
 
   &:focus,
   &:active {
-    color: #99cccc;
-
     background-color: @color-main--down;
+  }
+
+  &--logo {
+    background-color: @white;
+    border: none;
   }
 }
 
 .site-list__link {
   color: @white;
   text-decoration: none;
+
+  &:focus,
+  &:active {
+    color: #99cccc;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    min-width: 60px;
+
+    background-color: @white;
+
+    &:hover {
+      background-color: @white;
+    }
+
+    &:focus,
+    &:active {
+      background-color: @white;
+    }
+  }
+
+  .site-list__item:nth-child(1) {
+    order: 1;
+    padding-left: 60px;
+  }
+
+  .site-list__item:nth-child(2) {
+    order: 2;
+  }
+
+  .site-list__item:nth-child(3) {
+    order: 4;
+  }
+
+  .site-list__item:nth-child(4) {
+    order: 5;
+    padding-right: 60px;
+  }
+
+  .site-list__item:nth-child(5) {
+    order: 3;
+  }
+
+  .site-list__link {
+    color: @black;
+
+    &:hover {
+      color: @color-main;
+    }
+
+    &:focus,
+    &:active {
+      color: @color-grey;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item:first-child {
+    padding-left: 90px;
+  }
+
+  .site-list__item:nth-child(4) {
+    padding-right: 90px;
+  }
 }

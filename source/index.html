@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона: главная</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -25,11 +26,13 @@
           <li class="site-list__item">
             <a class="site-list__link" href="#">HTML Academy</a>
           </li>
+          <li class="site-list__item site-list__item--logo">
+            <a class="main-nav__logo">
+              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Лого Седоны">
+            </a>
+          </li>
         </ul>
       </div>
-      <a class="main-nav__logo">
-        <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Лого Седоны">
-      </a>
       <button class="main-nav__toggle main-nav__toggle--closed" type="button"></button>
       <button class="main-nav__close visually-hidden" type="button" name="close">закрыть</button>
     </nav>
@@ -45,13 +48,16 @@
       <p class="text-block__intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
     <section class="advantages-list">
-      <div class="advantages-list__item advantages-list__item--true">
-        <h3 class="advantages-list__title">Настоящий городок</h3>
-        <p class="advantages-list__number">&mdash; №1 &mdash;</p>
-        <p class="advantages-list__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
-      </div>
-      <div class="advantages-list__photo">
-        <img class="advantages-list__img--true" src="img/main-city-mobile@1x.jpg" alt="Фото городка" height="260" width="320">
+      <div class="advantages-list__container">
+        <div class="advantages-list__item advantages-list__item--true">
+          <h3 class="advantages-list__title">Настоящий городок</h3>
+          <p class="advantages-list__number">&mdash; №1 &mdash;</p>
+          <p class="advantages-list__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+        </div>
+        <div class="advantages-list__photo">
+          <img class="advantages-list__img advantages-list__img--true" src="img/main-city-mobile@1x.jpg" alt="Фото городка" height="260"
+            width="320">
+        </div>
       </div>
       <section class="advice">
         <h2 class="visually-hidden">Полезные рекомендации</h2>
@@ -70,28 +76,33 @@
           </li>
         </ul>
       </section>
-      <div class="advantages-list__item advantages-list__item--bridge">
-        <h3 class="advantages-list__title">Там есть мост Дьявола</h3>
-        <p class="advantages-list__number">&mdash; №2 &mdash;</p>
-        <p class="advantages-list__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+      <div class="advantages-list__container">
+        <div class="advantages-list__item advantages-list__item--bridge">
+          <h3 class="advantages-list__title">Там есть мост Дьявола</h3>
+          <p class="advantages-list__number">&mdash; №2 &mdash;</p>
+          <p class="advantages-list__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        </div>
+        <div class="advantages-list__photo">
+          <img class="advantages-list__img advantages-list__img--bridge" src="img/main-bridge-mobile@1x.jpg" alt="Фото моста" height="260"
+            width="320">
+        </div>
       </div>
-      <div class="advantages-list__photo">
-        <img class="advantages-list__img--bridge" src="img/main-bridge-mobile@1x.jpg" alt="Фото моста" height="260" width="320">
-      </div>
-      <div class="advantages-list__item advantages-list__item--small">
-        <h3 class="advantages-list__title">Небольшая площадь</h3>
-        <p class="advantages-list__number">&mdash; №3 &mdash;</p>
-        <p class="advantages-list__description">Все интересные места находятся очень близко</p>
-      </div>
-      <div class="advantages-list__item advantages-list__item--road">
-        <h3 class="advantages-list__title">Красивая дорога</h3>
-        <p class="advantages-list__number">&mdash; №4 &mdash;</p>
-        <p class="advantages-list__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-      </div>
-      <div class="advantages-list__item advantages-list__item--empty">
-        <h3 class="advantages-list__title">Мало туристов</h3>
-        <p class="advantages-list__number">&mdash; №5 &mdash;</p>
-        <p class="advantages-list__description">Большинство едет в Гранд Каньон и толпится там</p>
+      <div class="advantages-list__container">
+        <div class="advantages-list__item advantages-list__item--small">
+          <h3 class="advantages-list__title">Небольшая площадь</h3>
+          <p class="advantages-list__number">&mdash; №3 &mdash;</p>
+          <p class="advantages-list__description">Все интересные места находятся очень близко</p>
+        </div>
+        <div class="advantages-list__item advantages-list__item--road">
+          <h3 class="advantages-list__title">Красивая дорога</h3>
+          <p class="advantages-list__number">&mdash; №4 &mdash;</p>
+          <p class="advantages-list__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="advantages-list__item advantages-list__item--empty">
+          <h3 class="advantages-list__title">Мало туристов</h3>
+          <p class="advantages-list__number">&mdash; №5 &mdash;</p>
+          <p class="advantages-list__description">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
       </div>
     </section>
 
