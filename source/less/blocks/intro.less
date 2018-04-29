@@ -1,15 +1,25 @@
 .intro--index {
   position: relative;
 
-  min-height: 390px;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
+  padding-bottom: 78px;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: 50% 0;
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 26px;
+    background: url(../img/bg-intro-triangle-mobile.svg) no-repeat 100% 0;
+  }
 }
 
 .intro__image--index {
-  padding-top: 89px;
+  padding-top: 90px;
 }
 
 .intro--photo {
@@ -28,10 +38,18 @@
 
 @media (min-width: @tablet-width) {
   .intro--index {
-    min-height: 518px;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 50%;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 768px;
+      height: 57px;
+      background: url(../img/bg-intro-triangle-tablet.svg) no-repeat 100% 0;
+    }
   }
 
   .intro--photo {
