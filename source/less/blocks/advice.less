@@ -29,8 +29,63 @@
     display: flex;
     align-items: center;
     width: auto;
-    min-height: 330px;
 
     text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 160px;
+  }
+
+  .advice {
+    margin: 0;
+    margin-bottom: 50px;
+    padding-right: 10px;
+  }
+  
+  .advice__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0 32px;
+    &--accomodation {
+      order: 1;
+    }
+    &--food {
+      order: 2;
+    }
+    &--souvenirs {
+      order: 3;
+    }
+  }
+
+  .advice__title {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+}
+
+@media (min-width: @desktop-width) {
+  .advice {
+    margin-bottom: 70px;
+    padding-right: 20px;
+  }
+  .advice__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0 55px;
+    &--accomodation {
+      padding-left: 60px;
+    }
+    &--food {
+      padding-left: 60px;
+      padding-right: 50px;
+    }
+    &--souvenirs {
+      padding-left: 85px;
+    }
+  }
+  .advice__title--food {
+    padding-left: 8px;
   }
 }
