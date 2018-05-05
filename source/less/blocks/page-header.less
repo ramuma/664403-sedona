@@ -1,18 +1,20 @@
 .page-header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 320px;
   margin: 0 auto;
-  position: relative;
 }
 
 .page-header__logo {
-  display: block;
   position: absolute;
   top: 223px;
   left: 110px;
   z-index: 2;
+
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
@@ -27,11 +29,11 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-  width: 1200px;
-}
+    width: 1200px;
+  }
 
-.page-header__logo {
-  top: 0;
-  left: 549px;
-}
+  .page-header__logo {
+    top: 0;
+    left: 549px;
+  }
 }
