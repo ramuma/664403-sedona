@@ -1,11 +1,98 @@
 .text-block {
   padding: 0 20px;
+
+  &--photo,
+  &--form {
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid @color-grey;
+  }
 }
 
 .text-block__title {
-  margin-bottom: 27px;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0 10px;
+
+  font-size: 18px;
+  vertical-align: middle;
+
+  &--interest {
+    margin-bottom: 5px;
+
+    font-size: 21px;
+  }
 }
 
 .text-block__intro {
   line-height: 26px;
+
+  &--photo {
+    padding: 0 5px 13px;
+
+    line-height: 24px;
+  }
+
+  &--form {
+    padding: 0;
+
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .text-block {
+    width: 500px;
+    padding: 0 20px;
+
+    &--photo {
+      margin: 0 auto;
+    }
+
+    &--form {
+      margin: 0 auto;
+
+      border: none;
+    }
+  }
+
+  .text-block__intro {
+    &--hotels {
+      display: inline-block;
+
+      vertical-align: middle;
+    }
+
+    &--photo {
+      margin-bottom: 70px;
+      padding: 0 30px;
+    }
+
+    &--form {
+      margin-bottom: 75px;
+      padding: 0 30px;
+    }
+  }
+
+  .text-block__title {
+    font-size: 21px;
+
+    &--interest,
+    &--photo,
+    &--doubt,
+    &--form {
+      margin-bottom: 15px;
+
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .text-block__intro {
+    &--form {
+      margin-bottom: 60px;
+    }
+  }
 }
