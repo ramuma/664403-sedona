@@ -18,10 +18,20 @@
 }
 
 @media (min-width: @tablet-width) {
-  .button--hotels {
-    margin-top: 25px;
-    margin-bottom: 60px;
-    padding: 16px 135px;
+  .button {
+    &--hotels {
+      margin-top: 25px;
+      margin-bottom: 60px;
+      padding: 16px 135px;
+    }
+    &--feedback {
+      padding: 16px 73px 16px 67px;
+    }
+  }
+  .button__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

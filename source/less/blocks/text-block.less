@@ -1,6 +1,7 @@
 .text-block {
   padding: 0 20px;
-  &--photo {
+  &--photo,
+  &--form {
     border-bottom: 1px solid @color-grey;
     margin-bottom: 22px;
   }
@@ -25,12 +26,23 @@
     line-height: 24px;
     padding: 0 5px 13px;
   }
+  &--form {
+    line-height: 24px;
+    padding: 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .text-block {
     width: 500px;
     padding: 0 20px;
+    &--photo {
+      margin: 0 auto;
+    }
+    &--form {
+      margin: 0 auto;
+      border: none;
+    }
   }
 
   .text-block__intro {
@@ -38,11 +50,22 @@
       display: inline-block;
       vertical-align: middle;
     }
+    &--photo {
+      padding: 0 30px;
+      margin-bottom: 70px;
+    }
+    &--form {
+      padding: 0 30px;
+      margin-bottom: 75px;
+    }
   }
 
   .text-block__title {
     font-size: 21px;
-    &--interest {
+    &--interest,
+    &--photo,
+    &--doubt,
+    &--form {
       font-size: 30px;
       margin-bottom: 15px;
     }
