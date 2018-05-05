@@ -315,10 +315,87 @@
 }
 
 @media (min-width: @desktop-width) {
+  .feedback-form {
+    margin-bottom: 70px;
+  }
+
   .feedback-form--contact-wrapper {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     width: 960px;
+  }
+
+  .feedback-form__title {
+    &--impression {
+      padding-left: 85px;
+    }
+    &--contact {
+      margin-bottom: 75px;
+    }
+  }
+
+  .feedback-form__label {
+    &--radio {
+      padding-left: 0;
+      padding-right: 70px;
+    }
+    &--name {
+      width: 400px;
+    }
+    &--hide {
+      display: none;
+    }
+    &--contact {
+      display: block;
+      margin: 0;
+      padding: 0;
+      padding-right: 13px;
+      text-align: left;
+    }
+    &--checkbox {
+      position: relative;
+      cursor: pointer;
+    }
+  }
+
+  .feedback-form__input--checkbox + label::before {
+    position: absolute;
+    top: -13px;
+    left: -75px;
+
+    margin-right: 20px;
+  }
+
+  .feedback-form__field {
+    &--name {
+      max-width: 350px;
+    }
+    &--contact {
+      width: 315px;
+    }
+  }
+
+  .feedback-form__item {
+    &--contact {
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      width: 50%;
+    }
+  }
+
+  .feedback-form__list--sights {
+    width: 25%;
+    justify-content: space-between;
+    margin-bottom: 55px;
+    padding-left: 105px;
+    &:first-child {
+      padding-left: 80px;
+    }
+    &:last-child {
+      padding-left: 115px;
+    }
   }
 
   .feedback-form__textarea {

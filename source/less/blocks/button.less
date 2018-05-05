@@ -36,8 +36,20 @@
 }
 
 @media (min-width: @desktop-width) {
-  .button--hotels {
+  .button__wrapper {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button {
+  &--hotels {
     margin-top: 29px;
     margin-bottom: 67px;
   }
+  &--feedback {
+    padding: 16px 146px 16px 147px;
+  }
+}
 }

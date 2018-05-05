@@ -65,15 +65,31 @@
 }
 
 @media (min-width: @desktop-width) {
-  .feedback-wrapper--impression {
-    width: 400px;
-  }
+  .feedback-wrapper {
+    &--impression {
+      width: 480px;
+      padding-left: 55px;
+    }
 
-  .feedback-wrapper--name {
-    width: 400px;
-  }
+    &--name {
+      width: 480px;
+      padding-left: 105px;
+    }
 
-  .feedback-wrapper--contact {
-    width: 648px;
+    &--contact {
+      width: 960px;
+      margin: 0 auto;
+    }
+    &--sights {
+      width: 960px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      padding: 0;
+    }
+    &--text {
+      width: 960px;
+      margin: 0 auto;
+      margin-bottom: 38px;
+    }
   }
 }
