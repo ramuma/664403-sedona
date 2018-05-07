@@ -13,6 +13,15 @@
   text-decoration: none;
 
   background-color: @color-main;
+  cursor: pointer;
+
+  &--wrong {
+    width: 180px;
+  }
+
+  &--success {
+    width: 280px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -26,6 +35,14 @@
     &--feedback {
       width: 324px;
       padding: 16px 10px;
+    }
+
+    &--wrong {
+      width: 270px;
+    }
+
+    &--success {
+      width: 460px;
     }
   }
 

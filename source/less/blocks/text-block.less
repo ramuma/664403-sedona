@@ -7,7 +7,7 @@
   }
 
   &--hotels {
-    padding: 0 20px;    
+    padding: 0 20px;
     padding-top: 25px;
     padding-bottom: 50px;
   }
@@ -19,14 +19,25 @@
 
   &--photo,
   &--form {
-    padding: 0 20px; 
+    padding: 0 20px;
     padding-top: 35px;
+
     border-bottom: 1px solid @color-grey;
   }
 
   &--photo {
     padding-bottom: 27px;
-}
+  }
+
+  &--wrong {
+    z-index: 104;
+
+    padding: 45px 55px 35px 55px;
+  }
+
+  &--success {
+    padding-bottom: 45px;
+  }
 }
 
 .text-block__title {
@@ -39,45 +50,51 @@
   vertical-align: middle;
 
   &--interest {
-    font-size: 21px;
     margin-bottom: 20px;
+
+    font-size: 21px;
   }
 
   &--presentation {
     margin-bottom: 10px;
-}
+  }
+
+  &--success {
+    padding: 45px 40px 0 40px;
+  }
 }
 
 .text-block__intro {
-  line-height: 26px;
   margin: 0;
-  margin-bottom: 14px;
 
-  &--interest {
-    margin-bottom: 20px;
-  }
+  line-height: 26px;
+
   &--hotels {
-    margin-bottom: 33px;
+    margin-bottom: 40px;
+
     line-height: 24px;
   }
 
-  &--photo {
-    line-height: 24px;
-    margin: 0;
-  }
-
+  &--photo,
   &--form {
-    padding: 0;
-
     line-height: 24px;
+  }
+
+  &--wrong {
+    margin-bottom: 35px;
+  }
+
+  &--success {
+    margin-bottom: 35px;
+    padding: 0 40px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .text-block {
     width: 500px;
-    padding: 0 40px;
     margin: 0 auto;
+    padding: 0 40px;
 
     &--photo {
       padding-top: 75px;
@@ -89,9 +106,10 @@
     }
 
     &--form {
-      border: none;
       padding-top: 75px;
       padding-bottom: 60px;
+
+      border: none;
     }
 
     &--advantages {
@@ -103,6 +121,12 @@
       padding-top: 70px;
       padding-bottom: 70px;
     }
+
+    &--success {
+      padding-top: 60px;
+      padding-right: 115px;
+      padding-left: 115px;
+    }
   }
 
   .text-block__intro {
@@ -110,7 +134,10 @@
       display: inline-block;
 
       vertical-align: middle;
-      margin-bottom: 40px;
+    }
+
+    &--success {
+      padding: 0;
     }
   }
 
@@ -127,15 +154,12 @@
 
     &--interest {
       margin-bottom: 25px;
+
       font-size: 30px;
     }
-  }
-}
 
-@media (min-width: @desktop-width) {
-  .text-block__intro {
-    &--form {
-      margin-bottom: 60px;
+    &--success {
+      padding: 0;
     }
   }
 }
