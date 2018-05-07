@@ -1,6 +1,8 @@
 .button {
   display: inline-block;
-  padding: 16px 46px;
+  box-sizing: border-box;
+  width: 280px;
+  padding: 16px 10px;
 
   font-weight: bold;
   font-size: 21px;
@@ -13,26 +15,24 @@
   background-color: @color-main;
 }
 
-.button--hotels {
-  margin-top: 17px;
-}
-
 @media (min-width: @tablet-width) {
   .button {
     &--hotels {
-      margin-top: 25px;
+      width: 460px;
       margin-bottom: 60px;
-      padding: 16px 135px;
+      padding: 16px 10px;
     }
 
     &--feedback {
-      padding: 16px 73px 16px 67px;
+      width: 324px;
+      padding: 16px 10px;
     }
   }
 
   .button__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     width: 100%;
   }
 }
@@ -52,7 +52,7 @@
     }
 
     &--feedback {
-      padding: 16px 146px 16px 147px;
+      width: 480px;
     }
   }
 }

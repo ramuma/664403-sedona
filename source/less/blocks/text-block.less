@@ -1,37 +1,69 @@
 .text-block {
-  padding: 0 20px;
+  padding: 0 30px;
+
+  &--advantages {
+    padding-top: 40px;
+    padding-bottom: 13px;
+  }
+
+  &--hotels {
+    padding: 0 20px;    
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  &--presentation {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
 
   &--photo,
   &--form {
-    margin-bottom: 22px;
-
+    padding: 0 20px; 
+    padding-top: 35px;
     border-bottom: 1px solid @color-grey;
   }
+
+  &--photo {
+    padding-bottom: 27px;
+}
 }
 
 .text-block__title {
   display: inline-block;
   margin: 0;
-  margin-bottom: 12px;
-  padding: 0 10px;
+  margin-bottom: 25px;
+  padding: 0;
 
   font-size: 18px;
   vertical-align: middle;
 
   &--interest {
-    margin-bottom: 5px;
-
     font-size: 21px;
+    margin-bottom: 20px;
   }
+
+  &--presentation {
+    margin-bottom: 10px;
+}
 }
 
 .text-block__intro {
   line-height: 26px;
+  margin: 0;
+  margin-bottom: 14px;
+
+  &--interest {
+    margin-bottom: 20px;
+  }
+  &--hotels {
+    margin-bottom: 33px;
+    line-height: 24px;
+  }
 
   &--photo {
-    padding: 0 5px 13px;
-
     line-height: 24px;
+    margin: 0;
   }
 
   &--form {
@@ -44,16 +76,32 @@
 @media (min-width: @tablet-width) {
   .text-block {
     width: 500px;
-    padding: 0 20px;
+    padding: 0 40px;
+    margin: 0 auto;
 
     &--photo {
-      margin: 0 auto;
+      padding-top: 75px;
+      padding-bottom: 70px;
+    }
+
+    &--hotels {
+      padding-top: 60px;
     }
 
     &--form {
-      margin: 0 auto;
-
       border: none;
+      padding-top: 75px;
+      padding-bottom: 60px;
+    }
+
+    &--advantages {
+      padding-top: 50px;
+      padding-bottom: 35px;
+    }
+
+    &--presentation {
+      padding-top: 70px;
+      padding-bottom: 70px;
     }
   }
 
@@ -62,28 +110,23 @@
       display: inline-block;
 
       vertical-align: middle;
-    }
-
-    &--photo {
-      margin-bottom: 70px;
-      padding: 0 30px;
-    }
-
-    &--form {
-      margin-bottom: 75px;
-      padding: 0 30px;
+      margin-bottom: 40px;
     }
   }
 
   .text-block__title {
     font-size: 21px;
 
-    &--interest,
     &--photo,
     &--doubt,
     &--form {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
 
+      font-size: 30px;
+    }
+
+    &--interest {
+      margin-bottom: 25px;
       font-size: 30px;
     }
   }

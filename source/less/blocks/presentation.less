@@ -1,10 +1,22 @@
-.presentation {
-  margin-top: 50px;
-  margin-bottom: 23px;
+.presentation__video {
+  position: relative;
+
+  min-height: 263px;
 }
 
-.presentation__video {
-  margin-bottom: 133px;
+.presentation__img {
+  display: block;
+}
+
+.presentation__controls {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+
+  width: 280px;
+  min-height: 66px;
+
+  background-color: #f2f2f2;
 }
 
 @media (min-width: @tablet-width) {
@@ -14,12 +26,9 @@
 
   .presentation__video {
     position: relative;
-
-    margin-bottom: 75px;
   }
 
   .presentation__img {
-    display: block;
     width: 648px;
     height: 503px;
     margin: 0 auto;
@@ -42,10 +51,6 @@
   .presentation__img {
     width: 800px;
     height: 503px;
-  }
-
-  .presentation__video {
-    margin-bottom: 92px;
   }
 
   .presentation__controls {
