@@ -16,8 +16,6 @@
     <nav class="main-nav">
       <button class="main-nav__button main-nav__button--close" type="button">
       </button>
-      <button class="main-nav__button main-nav__button--toggle" type="button">
-      </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
@@ -32,6 +30,10 @@
           <a class="main-nav__link main-nav__link--shadow" href="#">HTML Academy</a>
         </li>
       </ul>
+      <div class="main-nav__top">
+        <button class="main-nav__button main-nav__button--toggle" type="button">
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -47,35 +49,30 @@
 
     <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
       <fieldset class="feedback-wrapper feedback-wrapper--name">
-        <legend class="feedback-form__title feedback-form__title--name">Представьтесь:</legend>
-        <p class="feedback-form__item feedback-form__item--name">
+        <h2 class="feedback-form__title feedback-form__title--name">Представьтесь:</h2>
+        <div class="feedback-form__item feedback-form__item--name">
           <label class="feedback-form__label feedback-form__label--name" for="user-name">
             Имя
-            <sup>&#8270;</sup>:
+            <sup>&#8270;</sup>:</label>
 
-            <input class="feedback-form__field feedback-form__field--name feedback-form__field--long" id="user-name" type="text" name="user-name"
-              placeholder="Петр" required>
-          </label>
-        </p>
-        <p class="feedback-form__item feedback-form__item--name">
+          <input class="feedback-form__field feedback-form__field--name feedback-form__field--long" id="user-name" type="text" name="user-name"
+            placeholder="Петр" required>
+        </div>
+        <div class="feedback-form__item feedback-form__item--name">
           <label class="feedback-form__label feedback-form__label--name" for="user-surname">
             Фамилия
-            <sup>&#8270;</sup>:
-
-            <input class="feedback-form__field feedback-form__field--name" id="user-surname" type="text" name="user-surname" placeholder="Иванов"
-              required>
-          </label>
-        </p>
-        <p class="feedback-form__item feedback-form__item--name">
+            <sup>&#8270;</sup>:</label>
+          <input class="feedback-form__field feedback-form__field--name" id="user-surname" type="text" name="user-surname" placeholder="Иванов"
+            required>
+        </div>
+        <div class="feedback-form__item feedback-form__item--name">
           <label class="feedback-form__label feedback-form__label--name" for="user-fathername">
-            Отчество:
-
-            <input class="feedback-form__field feedback-form__field--name" id="user-fathername" type="text" name="user-fathername" placeholder="Александрович">
-          </label>
-        </p>
+            Отчество:</label>
+          <input class="feedback-form__field feedback-form__field--name" id="user-fathername" type="text" name="user-fathername" placeholder="Александрович">
+        </div>
       </fieldset>
       <fieldset class="feedback-wrapper feedback-wrapper--contact">
-        <legend class="feedback-form__title feedback-form__title--contact">Контактная информация:</legend>
+        <h2 class="feedback-form__title feedback-form__title--contact">Контактная информация:</h2>
         <div class="feedback-form--contact-wrapper">
           <div class="feedback-form__item feedback-form__item--contact">
             <label class="feedback-form__label feedback-form__label--contact" for="user-phone">
@@ -94,7 +91,7 @@
         </div>
       </fieldset>
       <fieldset class="feedback-wrapper feedback-wrapper--impression">
-        <legend class="feedback-form__title feedback-form__title--impression">Ваше общее впечатление:</legend>
+        <h2 class="feedback-form__title feedback-form__title--impression">Ваше общее впечатление:</h2>
         <ul class="feedback-form__list feedback-form__list--radio">
           <li class="feedback-form__line">
             <input class="feedback-form__input feedback-form__input--radio visually-hidden" type="radio" name="impression" value="positive"
@@ -121,7 +118,7 @@
       </fieldset>
 
       <fieldset class="feedback-wrapper feedback-wrapper--sights">
-        <legend class="feedback-form__title feedback-form__title--sights">Посещенные достопримечательности:</legend>
+        <h2 class="feedback-form__title feedback-form__title--sights">Посещенные достопримечательности:</h2>
         <ul class="feedback-form__list--container">
           <li class="feedback-form__list--sights">
             <input class="feedback-form__input feedback-form__input--checkbox visually-hidden" type="checkbox" name="devil-bridge" id="devil-bridge"
@@ -154,7 +151,7 @@
       </fieldset>
 
       <fieldset class="feedback-wrapper feedback-wrapper--text">
-        <legend class="feedback-form__title feedback-form__title--textarea">Опишите свои эмоции:</legend>
+        <h2 class="feedback-form__title feedback-form__title--textarea">Опишите свои эмоции:</h2>
         <p class="feedback-form__item feedback-form__item--textarea">
           <label class="feedback-form__label visually-hidden" for="user-comment">
             Текст
@@ -223,15 +220,15 @@
     </div>
   </footer>
 
-  <section class="popup popup__wrong visually-hidden">
-    <h2 class="popup__title">Что-то пошло не так!</h2>
-    <p class="popup__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <button class="popup__close" type="button" name="close">закрыть</button>
+  <section class="text-block--wrong popup popup--wrong">
+    <h2 class="text-block__title text-block__title--wrong">Что-то пошло не так!</h2>
+    <p class="text-block__intro text-block__intro--wrong">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="button button--wrong" type="button" name="close">OK</button>
   </section>
-  <section class="popup popup__success visually-hidden">
-    <h2 class="popup__title">Ваш отзыв отправлен!</h2>
-    <p class="popup__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-    <button class="popup__close" type="button" name="close">закрыть</button>
+  <section class="text-block--success popup popup--success">
+      <h2 class="text-block__title text-block__title--success">Ваш отзыв отправлен!</h2>
+      <p class="text-block__intro text-block__intro--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="button button--success" type="button" name="close">Закрыть окно</button>
   </section>
 </body>
 

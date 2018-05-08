@@ -1,5 +1,5 @@
 .feedback-form {
-  margin-bottom: 70px;
+  padding-bottom: 45px;
 }
 
 .feedback-form__list,
@@ -13,33 +13,34 @@
 .feedback-form__list--sights {
   position: relative;
 
-  margin-bottom: 53px;
-  padding-left: 85px;
+  margin-bottom: 10px;
+  padding: 16px 17px 27px 85px;
 
   text-align: left;
 
   &:last-child {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
 }
 
 .feedback-form__title {
-  margin-bottom: 15px;
+  margin: 0;
+  margin-bottom: 20px;
 
   font-weight: bold;
   font-size: 18px;
 
   &--impression {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 
   &--sights {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   &--textarea,
   &--feedback {
-    margin-bottom: 0;
+    margin-bottom: 25px;
   }
 }
 
@@ -47,26 +48,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 19px;
-  padding: 0 8px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
 
   &--contact {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 10px;
   }
+
+  &--textarea {
+    margin-bottom: 0;
+  }
 }
 
 .feedback-form__field {
-  width: 192px;
+  flex-grow: 1;
   min-height: 56px;
 
   background-color: #f2f2f2;
   border: none;
-
-  &--long {
-    width: 230px;
-  }
 
   &--contact {
     width: 222px;
@@ -86,22 +89,18 @@
     margin-bottom: 8px;
     padding-left: 20px;
   }
-
-  &--radio {
-    padding-left: 55px;
-  }
 }
 
 .feedback-form__line {
   position: relative;
 
-  margin-bottom: 42px;
+  padding: 16px 17px 27px 78px;
 }
 
 .feedback-form__input--radio + label::before {
   content: "";
   position: absolute;
-  bottom: -15px;
+  bottom: 10px;
   left: 5px;
 
   display: inline-block;
@@ -118,7 +117,7 @@
 .feedback-form__input--radio:checked + label::before {
   content: "";
   position: absolute;
-  bottom: -15px;
+  bottom: 10px;
   left: 5px;
 
   display: inline-block;
@@ -136,13 +135,12 @@
 .feedback-form__input--checkbox + label::before {
   content: "";
   position: absolute;
-  top: -13px;
-  left: 5px;
+  bottom: 10px;
+  left: 0;
 
   display: inline-block;
   width: 55px;
   height: 55px;
-  margin-right: 10px;
 
   vertical-align: middle;
 
@@ -194,8 +192,8 @@
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    margin-bottom: 93px;
     padding: 0 60px;
+    padding-bottom: 30px;
 
     &--bottom {
       display: flex;
@@ -214,7 +212,6 @@
   .feedback-form__list--sights {
     box-sizing: border-box;
     width: 50%;
-    margin-bottom: 60px;
     padding-left: 110px;
   }
 
@@ -224,13 +221,13 @@
     font-size: 21px;
 
     &--impression {
-      margin-bottom: 75px;
+      margin-bottom: 55px;
 
       text-align: left;
     }
 
     &--name {
-      margin-bottom: 40px;
+      margin-bottom: 55px;
       padding-left: 35px;
 
       text-align: left;
@@ -249,7 +246,7 @@
     &--sights {
       width: 290px;
       margin: 0 auto;
-      margin-bottom: 55px;
+      margin-bottom: 40px;
     }
 
     &--feedback {
@@ -257,54 +254,41 @@
     }
 
     &--textarea {
-      margin-bottom: 45px;
+      margin-bottom: 55px;
     }
   }
 
   .feedback-form__input--checkbox + label::before {
     position: absolute;
-    top: -13px;
+    top: 0;
     left: 30px;
 
     margin-right: 20px;
   }
 
   .feedback-form__line {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    padding-left: 35px;
   }
 
   .feedback-form__label {
-    &--radio {
-      padding-left: 10px;
-    }
-
     &--name {
       display: flex;
       align-items: center;
-      width: 267px;
-      padding-right: 0;
-      padding-left: 20px;
+      margin: 0;
+      padding: 0;
+      padding-right: 10px;
     }
-  }
-
-  .feedback-form__field {
-    margin-bottom: 5px;
   }
 
   .feedback-form__field--name {
     flex-grow: 1;
     max-width: 216px;
-    margin-left: 17px;
   }
 
   .feedback-form--contact-wrapper {
     box-sizing: border-box;
     width: 648px;
-  }
-
-  .feedback-form__item--contact {
-    margin-bottom: 15px;
-    padding: 0;
   }
 
   .feedback-form__field--contact {
@@ -313,8 +297,9 @@
 
   .feedback-form__obligatory {
     display: inline-block;
+    margin: 0;
 
-    vertical-align: bottom;
+    vertical-align: top;
     color: @color-grey;
   }
 
@@ -324,8 +309,16 @@
     }
 
     &--name {
+      box-sizing: border-box;
+      width: 267px;
+      margin: 0;
+      margin-bottom: 20px;
       padding: 0;
-      padding-left: 15px;
+    }
+
+    &--contact {
+      margin-bottom: 15px;
+      padding: 0;
     }
   }
 
@@ -336,10 +329,12 @@
   .feedback-form__list--radio::after {
     content: "";
     position: absolute;
-    bottom: -15px;
     right: 0;
+    bottom: -15px;
+
     width: 1px;
     height: 292px;
+
     background-color: #dbdbdb;
   }
 
@@ -350,7 +345,7 @@
 
 @media (min-width: @desktop-width) {
   .feedback-form {
-    margin-bottom: 70px;
+    padding-bottom: 70px;
   }
 
   .feedback-form--contact-wrapper {
@@ -376,10 +371,6 @@
       padding-left: 0;
     }
 
-    &--name {
-      width: 400px;
-    }
-
     &--hide {
       display: none;
     }
@@ -388,7 +379,7 @@
       display: block;
       margin: 0;
       padding: 0;
-      padding-right: 13px;
+      padding-right: 10px;
 
       text-align: left;
     }
@@ -414,7 +405,7 @@
     }
 
     &--contact {
-      width: 315px;
+      max-width: 318px;
     }
   }
 
@@ -423,15 +414,18 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      width: 50%;
+    }
+
+    &--name {
+      width: 400px;
     }
   }
 
   .feedback-form__list--sights {
     justify-content: space-between;
     width: 25%;
-    margin-bottom: 55px;
     padding-left: 105px;
+    margin: 0;
 
     &:first-child {
       padding-left: 80px;
@@ -439,6 +433,8 @@
 
     &:last-child {
       padding-left: 115px;
+      padding-right: 0;
+      margin: 0;
     }
   }
 
@@ -449,10 +445,12 @@
   .feedback-form__list--radio::after {
     content: "";
     position: absolute;
-    bottom: -15px;
     right: -60px;
+    bottom: -15px;
+
     width: 1px;
     height: 292px;
+
     background-color: #dbdbdb;
   }
 

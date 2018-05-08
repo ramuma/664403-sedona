@@ -16,8 +16,6 @@
     <nav class="main-nav">
       <button class="main-nav__button main-nav__button--close" type="button">
       </button>
-      <button class="main-nav__button main-nav__button--toggle" type="button">
-      </button>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active">
           <a class="main-nav__link">Главная</a>
@@ -32,6 +30,10 @@
           <a class="main-nav__link main-nav__link--shadow" href="#">HTML Academy</a>
         </li>
       </ul>
+      <div class="main-nav__top">
+        <button class="main-nav__button main-nav__button--toggle" type="button">
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -40,7 +42,7 @@
     <div class="intro--index">
       <img class="intro__image--index" src="../img/text-sedona-index.svg" alt="Welcome to the gorgeous Sedona!" width="280" height="212">
     </div>
-    <section class="advantages text-block">
+    <section class="text-block text-block--advantages">
       <h2 class="text-block__title">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p class="text-block__intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
@@ -103,10 +105,9 @@
       </div>
     </section>
 
-    <section class="hotel-search text-block">
+    <section class="text-block text-block--hotels">
       <h2 class="text-block__title text-block__title--interest">Заинтересовались?</h2>
-      <p class="text-block__intro text-block__intro--hotels">Укажите предполагаемые даты поездки,
-        <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="text-block__intro text-block__intro--hotels">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="button button--hotels" href="#hotels ">Найти гостиницу</a>
     </section>
     <section class="map">
@@ -118,7 +119,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <span class="page-footer__hashtag">#visitsedona</span>
-      <div class="page-footer__social social">
+      <div class="social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com" aria-label="Twitter">

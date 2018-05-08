@@ -1,6 +1,6 @@
 .advice {
-  margin-top: 36px;
-  margin-bottom: 37px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .advice__item {
@@ -26,21 +26,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .advice {
+    margin: 0;
+    padding: 20px 10px 60px 0;
+  }
+
   .advice__list {
     display: flex;
     align-items: center;
-    width: auto;
+    width: 100%;
     margin: 0;
     padding: 0;
-    padding-top: 160px;
+    padding-top: 140px;
 
     text-align: center;
-  }
-
-  .advice {
-    margin: 0;
-    margin-bottom: 50px;
-    padding-right: 10px;
   }
 
   .advice__item {
@@ -68,11 +67,15 @@
 
     font-size: 21px;
   }
+
+  .advice__description {
+    margin: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .advice {
-    margin-bottom: 70px;
+    padding-bottom: 70px;
     padding-right: 20px;
   }
 
