@@ -9,43 +9,42 @@
 </head>
 
 <body>
-
   <header class="page-header">
+    <a class="page-header__logo" href="index.html">
+      <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Лого Седоны">
+    </a>
     <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">Фото и видео</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML Academy</a>
-          </li>
-          <li class="site-list__item site-list__item--logo">
-            <a class="main-nav__logo" href="index.html">
-              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Лого Седоны">
-            </a>
-          </li>
-        </ul>
+      <button class="main-nav__button main-nav__button--close" type="button">
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-nav__item main-nav__item--active">
+          <a class="main-nav__link">Фото и видео</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Форма отзыва</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--shadow" href="#">HTML Academy</a>
+        </li>
+      </ul>
+      <div class="main-nav__top">
+        <button class="main-nav__button main-nav__button--toggle" type="button">
+        </button>
       </div>
-      <button class="main-nav__toggle main-nav__toggle--closed" type="button"></button>
-      <button class="main-nav__close visually-hidden" type="button" name="close">закрыть</button>
     </nav>
   </header>
 
   <main class="page-main">
     <h1 class="visually-hidden ">Седона</h1>
-    <div class="intro--photo ">
+    <div class="intro--photo">
       <img class="intro__image--photo" src="../img/text-sedona.svg" alt="Welcome to the gorgeous Sedona!" width="230" height="40">
     </div>
-    <section class="photo text-block">
-      <h2 class="text-block__title title">Фото и видео</h2>
-      <p class="text-block__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+    <section class="text-block text-block--photo">
+      <h2 class="text-block__title title text-block__title--photo">Фото и видео</h2>
+      <p class="text-block__intro text-block__intro--photo">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
     </section>
     <section class="multimedia">
       <ul class="multimedia__list">
@@ -54,11 +53,13 @@
             <img class="multimedia__image multimedia__image--sunset" src="../img/photo-sunset-mobile@1x.jpg" width="280" height="280"
               alt="Дорога на фоне заката">
           </a>
-          <div class="multimedia__desc-wrapper">
-            <h3 class="multimedia__name">Неродные просторы</h3>
-            <p class="multimedia__author">Автор фото: Борис</p>
+          <div class="multimedia__description">
+            <div class="multimedia__desc-wrapper">
+              <h3 class="multimedia__name">Неродные просторы</h3>
+              <p class="multimedia__author">Автор фото: Борис</p>
+            </div>
             <div class="multimedia__like-wrapper">
-              <button class="multimedia__like" type="button" name="like">like</button>
+              <button class="multimedia__like" type="button" name="like"></button>
               <p class="multimedia__likes">1350</p>
             </div>
           </div>
@@ -67,11 +68,13 @@
           <a href="#" class="multimedia__link">
             <img class="multimedia__image" src="../img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Фото кактуса">
           </a>
-          <div class="multimedia__desc-wrapper--small">
-            <h3 class="multimedia__name">Местная растительность</h3>
-            <p class="multimedia__author">Автор фото: Сергей</p>
+          <div class="multimedia__description multimedia__description--small">
+            <div class="multimedia__desc-wrapper">
+              <h3 class="multimedia__name">Местная растительность</h3>
+              <p class="multimedia__author">Автор фото: Сергей</p>
+            </div>
             <div class="multimedia__like-wrapper">
-              <button class="multimedia__like" type="button" name="like">like</button>
+              <button class="multimedia__like" type="button" name="like"></button>
               <p class="multimedia__likes">143</p>
             </div>
           </div>
@@ -80,11 +83,13 @@
           <a href="#" class="multimedia__link">
             <img class="multimedia__image" src="../img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дороги сверху">
           </a>
-          <div class="multimedia__desc-wrapper--small">
-            <h3 class="multimedia__name">Дорога на север</h3>
-            <p class="multimedia__author">Автор фото: Петр</p>
+          <div class="multimedia__description multimedia__description--small">
+            <div class="multimedia__desc-wrapper">
+              <h3 class="multimedia__name">Дорога на север</h3>
+              <p class="multimedia__author">Автор фото: Петр</p>
+            </div>
             <div class="multimedia__like-wrapper">
-              <button class="multimedia__like" type="button" name="like">like</button>
+              <button class="multimedia__like" type="button" name="like"></button>
               <p class="multimedia__likes">96</p>
             </div>
           </div>
@@ -93,22 +98,28 @@
           <a href="#" class="multimedia__link">
             <img class="multimedia__image" src="../img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Фото моста">
           </a>
-          <div class="multimedia__desc-wrapper--small">
-            <h3 class="multimedia__name">Мост дьявола</h3>
-            <p class="multimedia__author">Автор фото: Антон</p>
+          <div class="multimedia__description multimedia__description--small">
+            <div class="multimedia__desc-wrapper">
+              <h3 class="multimedia__name">Мост дьявола</h3>
+              <p class="multimedia__author">Автор фото: Антон</p>
+            </div>
             <div class="multimedia__like-wrapper">
-              <button class="multimedia__like" type="button" name="like">like</button>
+              <button class="multimedia__like" type="button" name="like"></button>
               <p class="multimedia__likes">254</p>
             </div>
           </div>
         </li>
       </ul>
     </section>
-    <section class="presentation text-block">
-      <h2 class="text-block__title">Все еще сомневаетесь?</h2>
-      <p class="text-block__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      <video class="presentation__video" controls preload="metadata" width="320" height="201"></video>
+    <section class="presentation text-block text-block--presentation">
+      <h2 class="text-block__title text-block__title--doubt">Все еще сомневаетесь?</h2>
+      <p class="text-block__intro--photo">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
     </section>
+    <div class="presentation__video">
+      <img class="presentation__img" src="../img/video-mobile@1x.jpg" width="320" height="201"></img>
+      <div class="presentation__controls"></div>
+    </div>
+
   </main>
 
   <footer class="page-footer">

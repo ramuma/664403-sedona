@@ -1,3 +1,7 @@
+.multimedia {
+  padding-top: 20px;
+}
+
 .multimedia__list {
   margin: 0;
   padding: 0 20px;
@@ -6,19 +10,91 @@
 }
 
 .multimedia__item {
-  margin-bottom: 43px;
+  padding-bottom: 39px;
 
   text-align: left;
 }
 
+.multimedia__link {
+  display: block;
+}
+
+.multimedia__name {
+  margin: 0;
+  margin-top: 9px;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.multimedia__author {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: none;
+}
+
 .multimedia__like-wrapper {
   display: flex;
+  align-items: baseline;
+}
+
+.multimedia__like {
+  width: 25px;
+  height: 23px;
+  margin-right: 10px;
+
+  vertical-align: middle;
+
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  border: none;
+}
+
+.multimedia__likes {
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
 }
 
 @media (min-width: @tablet-width) {
+  .multimedia {
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
   .multimedia__list {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .multimedia__item {
+    margin: 0;
+    padding-bottom: 0;
+
+    background-color: #f2f2f2;
+  }
+
+  .multimedia__description {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 15px;
+
+    &--small {
+      padding: 0 30px 15px 20px;
+    }
+  }
+
+  .multimedia__name {
+    margin-top: 5px;
+  }
+
+  .multimedia__like-wrapper {
+    padding-top: 12px;
   }
 
   .multimedia__image {
@@ -33,28 +109,48 @@
 }
 
 @media (min-width: @desktop-width) {
-  .multimedia__list {
+  .multimedia {
     padding: 0;
   }
 
+  .multimedia__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .multimedia__item {
+    position: relative;
+  }
+
   .multimedia__image {
+    display: block;
     width: 400px;
-    height: 271px;
+    height: 270px;
 
     &--sunset {
       width: 1200px;
-      height: 400px;
+      height: 398px;
     }
   }
 
-  .multimedia__desc-wrapper {
-    z-index: 2;
+  .multimedia__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-    margin-top: -180px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px 14px;
+
+    background-color: rgba(0, 0, 0, 0.3);
 
     &--small {
-      margin-top: -150px;
+      padding-right: 30px;
     }
+  }
+
+  .multimedia__like {
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .multimedia__name,

@@ -1,35 +1,48 @@
 .advantages-list {
-  margin-bottom: 30px;
+  display: inline-block;
+
+  vertical-align: middle;
+}
+
+.advantages-list__photo {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .advantages-list__title {
-  font-size: 21px;
-  line-height: 10px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-size: 18px;
 }
 
 .advantages-list__number,
 .advantages-list__description {
   line-height: 21px;
-}
-
-.advantages-list__description,
-.advantages-list__title,
-.advantages-list__number {
   margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
+  margin-bottom: 17px;
 }
 
 .advantages-list__item {
-  padding: 60px 20px 42px 20px;
-
   color: @white;
 
   background-color: @color-main;
 
+  &--true {
+    padding: 55px 20px 23px 20px;
+  }
+
+  &--bridge {
+    padding: 38px 20px 22px 20px;
+  }
+
   &--small,
   &--road,
   &--empty {
+    padding: 23px 35px 12px 35px;
+
     color: @black;
 
     background-color: #eeeeee;
@@ -38,14 +51,33 @@
 
 @media (min-width: @tablet-width) {
   .advantages-list__item {
+    box-sizing: border-box;
     width: 256px;
 
     &--bridge {
       order: 2;
+      padding: 44px 53px 13px 52px;
+    }
+
+    &--true {
+      padding: 47px 40px 23px 40px;
+    }
+
+    &--small,
+    &--road {
+      padding: 42px 40px 35px 40px;
+    }
+
+    &--empty {
+      padding: 42px 50px 35px 50px;
     }
   }
 
   .advantages-list__title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 21px;
     line-height: 26px;
   }
 
@@ -62,6 +94,33 @@
 @media (min-width: @desktop-width) {
   .advantages-list__item {
     width: 400px;
+
+    &--bridge {
+      padding: 50px 85px 20px 85px;
+    }
+
+    &--true {
+      padding: 52px 55px 23px 60px;
+    }
+
+    &--small,
+    &--road {
+      padding: 42px 40px 35px 40px;
+    }
+
+    &--empty {
+      padding: 42px 50px 35px 50px;
+    }
+  }
+
+  .advantages-list__title {
+    width: 155px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    &--bridge {
+      width: 151px;
+    }
   }
 
   .advantages-list__img {

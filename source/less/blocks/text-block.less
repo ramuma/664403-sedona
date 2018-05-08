@@ -1,11 +1,166 @@
 .text-block {
-  padding: 0 20px;
+  padding: 0 30px;
+
+  &--advantages {
+    padding-top: 40px;
+    padding-bottom: 13px;
+  }
+
+  &--hotels {
+    padding: 0 20px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  &--presentation {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  &--photo,
+  &--form {
+    padding: 0 20px;
+    padding-top: 35px;
+
+    border-bottom: 1px solid @color-grey;
+  }
+
+  &--photo {
+    padding-bottom: 27px;
+  }
+
+  &--wrong {
+    z-index: 104;
+
+    padding: 45px 55px 35px 55px;
+  }
+
+  &--success {
+    padding-bottom: 45px;
+  }
 }
 
 .text-block__title {
-  margin-bottom: 27px;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  font-size: 18px;
+  vertical-align: middle;
+
+  &--interest {
+    margin-bottom: 20px;
+
+    font-size: 21px;
+  }
+
+  &--presentation {
+    margin-bottom: 10px;
+  }
+
+  &--success {
+    padding: 45px 40px 0 40px;
+  }
 }
 
 .text-block__intro {
+  margin: 0;
+
   line-height: 26px;
+
+  &--hotels {
+    margin-bottom: 40px;
+
+    line-height: 24px;
+  }
+
+  &--photo,
+  &--form {
+    line-height: 24px;
+  }
+
+  &--wrong {
+    margin-bottom: 35px;
+  }
+
+  &--success {
+    margin-bottom: 35px;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .text-block {
+    width: 500px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    &--photo {
+      padding-top: 75px;
+      padding-bottom: 70px;
+    }
+
+    &--hotels {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    &--form {
+      padding-top: 75px;
+      padding-bottom: 60px;
+
+      border: none;
+    }
+
+    &--advantages {
+      padding-top: 50px;
+      padding-bottom: 35px;
+    }
+
+    &--presentation {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    &--success {
+      padding-top: 60px;
+      padding-right: 115px;
+      padding-left: 115px;
+    }
+  }
+
+  .text-block__intro {
+    &--hotels {
+      display: inline-block;
+
+      vertical-align: middle;
+    }
+
+    &--success {
+      padding: 0;
+    }
+  }
+
+  .text-block__title {
+    font-size: 21px;
+
+    &--photo,
+    &--doubt,
+    &--form {
+      margin-bottom: 30px;
+
+      font-size: 30px;
+    }
+
+    &--interest {
+      margin-bottom: 25px;
+
+      font-size: 30px;
+    }
+
+    &--success {
+      padding: 0;
+    }
+  }
 }

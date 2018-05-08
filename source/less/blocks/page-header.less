@@ -1,0 +1,40 @@
+.page-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 223px;
+  left: 110px;
+  z-index: 2;
+
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 768px;
+  }
+
+  .page-header__logo {
+    top: 0;
+    left: 332px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1200px;
+  }
+
+  .page-header__logo {
+    top: 0;
+    left: 549px;
+  }
+}

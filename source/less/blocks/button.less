@@ -1,6 +1,8 @@
 .button {
   display: inline-block;
-  padding: 16px 46px;
+  box-sizing: border-box;
+  width: 280px;
+  padding: 16px 10px;
 
   font-weight: bold;
   font-size: 21px;
@@ -11,4 +13,61 @@
   text-decoration: none;
 
   background-color: @color-main;
+  cursor: pointer;
+
+  &--wrong {
+    width: 180px;
+  }
+
+  &--success {
+    width: 280px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    &--hotels {
+      width: 460px;
+      padding: 16px 10px;
+    }
+
+    &--feedback {
+      width: 324px;
+      padding: 16px 10px;
+    }
+
+    &--wrong {
+      width: 270px;
+    }
+
+    &--success {
+      width: 460px;
+    }
+  }
+
+  .button__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .button {
+    &--hotels {
+      margin-top: 29px;
+    }
+
+    &--feedback {
+      width: 480px;
+    }
+  }
 }
