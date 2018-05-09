@@ -11,7 +11,11 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Лого Седоны">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Лого Седоны">
+      </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__button main-nav__button--close" type="button">
@@ -40,7 +44,7 @@
   <main class="page-main">
     <h1 class="visually-hidden ">Седона</h1>
     <div class="intro--photo">
-      <img class="intro__image--photo" src="../img/text-sedona.svg" alt="Welcome to the gorgeous Sedona!" width="230" height="40">
+      <img class="intro__image--photo" src="img/text-sedona.svg" alt="Welcome to the gorgeous Sedona!" width="230" height="40">
     </div>
     <section class="text-block text-block--photo">
       <h2 class="text-block__title title text-block__title--photo">Фото и видео</h2>
@@ -50,8 +54,12 @@
       <ul class="multimedia__list">
         <li class="multimedia__item">
           <a href="#" class="multimedia__link">
-            <img class="multimedia__image multimedia__image--sunset" src="../img/photo-sunset-mobile@1x.jpg" width="280" height="280"
-              alt="Дорога на фоне заката">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img class="multimedia__image multimedia__image--sunset" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x"
+                alt="Дорога на фоне заката">
+            </picture>
           </a>
           <div class="multimedia__description">
             <div class="multimedia__desc-wrapper">
@@ -66,7 +74,11 @@
         </li>
         <li class="multimedia__item">
           <a href="#" class="multimedia__link">
-            <img class="multimedia__image" src="../img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Фото кактуса">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img class="multimedia__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Фото кактуса">
+            </picture>
           </a>
           <div class="multimedia__description multimedia__description--small">
             <div class="multimedia__desc-wrapper">
@@ -81,7 +93,11 @@
         </li>
         <li class="multimedia__item">
           <a href="#" class="multimedia__link">
-            <img class="multimedia__image" src="../img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дороги сверху">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+              <img class="multimedia__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дороги сверху">
+            </picture>
           </a>
           <div class="multimedia__description multimedia__description--small">
             <div class="multimedia__desc-wrapper">
@@ -96,7 +112,11 @@
         </li>
         <li class="multimedia__item">
           <a href="#" class="multimedia__link">
-            <img class="multimedia__image" src="../img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Фото моста">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="multimedia__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фото моста">
+            </picture>
           </a>
           <div class="multimedia__description multimedia__description--small">
             <div class="multimedia__desc-wrapper">
@@ -116,7 +136,12 @@
       <p class="text-block__intro--photo">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
     </section>
     <div class="presentation__video">
-      <img class="presentation__img" src="../img/video-mobile@1x.jpg" width="320" height="201"></img>
+        <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="presentation__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
+              alt="Фото моста">
+          </picture>
       <div class="presentation__controls"></div>
     </div>
 
