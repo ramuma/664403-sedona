@@ -6,12 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона: форма отзыва</title>
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Лого Седоны">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Лого Седоны">
+      </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__button main-nav__button--close" type="button">
@@ -40,7 +49,7 @@
   <main class="page-main">
     <h1 class="visually-hidden ">Седона</h1>
     <div class="intro--photo ">
-      <img class="intro__image--photo" src="../img/text-sedona.svg" alt="Welcome to the gorgeous Sedona!" width="230" height="40">
+      <img class="intro__image--photo" src="img/text-sedona.svg" alt="Welcome to the gorgeous Sedona!" width="230" height="40">
     </div>
     <section class="feedback text-block text-block--form">
       <h2 class="text-block__title text-block__title--form">Оставьте свой отзыв</h2>
@@ -52,16 +61,15 @@
         <h2 class="feedback-form__title feedback-form__title--name">Представьтесь:</h2>
         <div class="feedback-form__item feedback-form__item--name">
           <label class="feedback-form__label feedback-form__label--name" for="user-name">
-            Имя
-            <sup>&#8270;</sup>:</label>
-
+            Имя<sup>&#8270;</sup>:
+          </label>
           <input class="feedback-form__field feedback-form__field--name feedback-form__field--long" id="user-name" type="text" name="user-name"
             placeholder="Петр" required>
         </div>
         <div class="feedback-form__item feedback-form__item--name">
           <label class="feedback-form__label feedback-form__label--name" for="user-surname">
-            Фамилия
-            <sup>&#8270;</sup>:</label>
+            Фамилия<sup>&#8270;</sup>:
+          </label>
           <input class="feedback-form__field feedback-form__field--name" id="user-surname" type="text" name="user-surname" placeholder="Иванов"
             required>
         </div>
@@ -76,17 +84,16 @@
         <div class="feedback-form--contact-wrapper">
           <div class="feedback-form__item feedback-form__item--contact">
             <label class="feedback-form__label feedback-form__label--contact" for="user-phone">
-              <span class="feedback-form__label--hide">Контактный</span> телефон
-              <sup>&#8270;</sup>:
+              <span class="feedback-form__label--hide">
+                Контактный</span>телефон<sup>&#8270;</sup>:
             </label>
-            <input class="feedback-form__field feedback-form__field--contact" id="user-phone" type="tel" name="user-phone" placeholder="Введите телефон">
+            <input class="feedback-form__field feedback-form__field--contact" id="user-phone" type="tel" name="user-phone" placeholder="Введите телефон" required>
           </div>
           <div class="feedback-form__item feedback-form__item--contact">
             <label class="feedback-form__label feedback-form__label--contact" for="user-email">
-              Электронная почта
-              <sup>&#8270;</sup>:
+              Электронная почта<sup>&#8270;</sup>:
             </label>
-            <input class="feedback-form__field feedback-form__field--contact" id="user-email" type="email" name="user-email" placeholder="Введите e-mail">
+            <input class="feedback-form__field feedback-form__field--contact" id="user-email" type="email" name="user-email" placeholder="Введите e-mail" required>
           </div>
         </div>
       </fieldset>
@@ -226,9 +233,9 @@
     <button class="button button--wrong" type="button" name="close">OK</button>
   </section>
   <section class="text-block--success popup popup--success">
-      <h2 class="text-block__title text-block__title--success">Ваш отзыв отправлен!</h2>
-      <p class="text-block__intro text-block__intro--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="button button--success" type="button" name="close">Закрыть окно</button>
+    <h2 class="text-block__title text-block__title--success">Ваш отзыв отправлен!</h2>
+    <p class="text-block__intro text-block__intro--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <button class="button button--success" type="button" name="close">Закрыть окно</button>
   </section>
 </body>
 

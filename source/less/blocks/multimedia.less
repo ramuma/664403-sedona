@@ -1,17 +1,15 @@
 .multimedia {
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .multimedia__list {
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
 
   list-style: none;
 }
 
 .multimedia__item {
-  padding-bottom: 39px;
-
   text-align: left;
 }
 
@@ -19,9 +17,12 @@
   display: block;
 }
 
+.multimedia__description {
+  padding: 10px 10px 10px 0;
+}
+
 .multimedia__name {
   margin: 0;
-  margin-top: 9px;
 
   font-size: 14px;
   line-height: 24px;
@@ -37,21 +38,9 @@
 
 .multimedia__like-wrapper {
   display: flex;
+  justify-content: flex-start;
   align-items: baseline;
-}
-
-.multimedia__like {
-  width: 25px;
-  height: 23px;
-  margin-right: 10px;
-
-  vertical-align: middle;
-
-  background-color: rgba(255, 255, 255, 0);
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  border: none;
+  min-width: 70px;
 }
 
 .multimedia__likes {
@@ -61,10 +50,23 @@
   font-weight: bold;
 }
 
+.multimedia__like {
+  width: 25px;
+  height: 23px;
+  margin-right: 5px;
+  padding: 0;
+
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  border: none;
+}
+
 @media (min-width: @tablet-width) {
   .multimedia {
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 60px;
   }
 
   .multimedia__list {
@@ -74,7 +76,6 @@
 
   .multimedia__item {
     margin: 0;
-    padding-bottom: 0;
 
     background-color: #f2f2f2;
   }
@@ -82,19 +83,8 @@
   .multimedia__description {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px 15px;
-
-    &--small {
-      padding: 0 30px 15px 20px;
-    }
-  }
-
-  .multimedia__name {
-    margin-top: 5px;
-  }
-
-  .multimedia__like-wrapper {
-    padding-top: 12px;
+    align-items: center;
+    padding: 15px;
   }
 
   .multimedia__image {
