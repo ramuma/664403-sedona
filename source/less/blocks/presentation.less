@@ -9,14 +9,65 @@
 }
 
 .presentation__controls {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   bottom: 0;
   left: 20px;
 
   width: 280px;
-  min-height: 66px;
+}
 
+.presentation__bar {
+  position: relative;
+  width: 280px;
+  padding: 23px 15px 20px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.6);
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 17px;
+    left: 58px;
+    width: 9px;
+    height: 9px;
+    background-color: @white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+    width: 235px;
+    height: 3px;
+    background-color: @white;
+    opacity: 0.2;
+  }
+}
+
+.presentation__button-icon {
+  border: none;
+  padding: 0;
   background-color: #f2f2f2;
+  &--replay {
+    margin-right: 135px;
+  }
+  &--subtitles {
+    margin-right: 30px;
+  }
+}
+
+.presentation__icons {
+  padding: 19px 23px;
+  display: flex;
+  background-color: #f2f2f2;
+}
+
+.presentation__icon {
+  fill: #454545;
 }
 
 @media (min-width: @tablet-width) {
@@ -36,14 +87,48 @@
   }
 
   .presentation__controls {
+    flex-direction: row;
     position: absolute;
     bottom: 0;
     left: 60px;
 
     width: 648px;
-    min-height: 94px;
+    padding: 22px 18px 10px 70px;
+    box-sizing: border-box;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .presentation__bar {
+    background-color: transparent;
+    width: 486px;
+    &::before {
+      content: "";
+      bottom: 17px;
+      left: 135px;
+    }
+    &::after {
+      width: 388px;
+    }
+  }
+
+  .presentation__icons {
+    background-color: transparent;
+    position: relative;
+  }
+
+  .presentation__button-icon {
+    background-color: transparent;
+    &--replay {
+      position: absolute;
+      right: 580px;
+      top: 14px;
+      padding: 0;
+      margin-right: 0;
+    }
+  }
+
+  .presentation__icon {
+    fill: @white;
   }
 }
 
@@ -61,6 +146,24 @@
     width: 800px;
     min-height: 94px;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .presentation__button-icon {
+    &--replay {
+      right: 733px;
+    }
+  }
+
+  .presentation__bar {
+    background-color: transparent;
+    width: 620px;
+    &::before {
+      content: "";
+      bottom: 17px;
+      left: 135px;
+    }
+    &::after {
+      width: 540px;
+    }
   }
 }

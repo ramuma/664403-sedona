@@ -1,5 +1,5 @@
 .multimedia {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .multimedia__list {
@@ -11,14 +11,20 @@
 
 .multimedia__item {
   text-align: left;
+  margin-bottom: 22px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .multimedia__link {
   display: block;
+  padding: 0 20px;
 }
 
 .multimedia__description {
-  padding: 10px 10px 10px 0;
+  padding: 17px 30px 15px 20px;
+  border-bottom: 1px solid @color-grey;
 }
 
 .multimedia__name {
@@ -30,6 +36,7 @@
 
 .multimedia__author {
   margin: 0;
+  margin-bottom: 5px;
 
   font-size: 14px;
   line-height: 24px;
@@ -39,8 +46,8 @@
 .multimedia__like-wrapper {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
-  min-width: 70px;
+  vertical-align: middle;
+  width: 65px;
 }
 
 .multimedia__likes {
@@ -51,16 +58,16 @@
 }
 
 .multimedia__like {
-  width: 25px;
-  height: 23px;
-  margin-right: 5px;
+  width: 22px;
+  height: 20px;
+  margin-right: 10px;
   padding: 0;
-
-  background-color: rgba(255, 255, 255, 0);
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
-  background-position: 0 100%;
   border: none;
+  cursor: pointer;
+}
+
+.multimedia__like-icon {
+  fill: #b2b2b2;
 }
 
 @media (min-width: @tablet-width) {
@@ -80,21 +87,34 @@
     background-color: #f2f2f2;
   }
 
+  .multimedia__link {
+    padding: 0;
+  }
+
   .multimedia__description {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 15px 20px 17px;
+    border-bottom: none;
+  }
+
+  .multimedia__author {
+    margin: 0;
   }
 
   .multimedia__image {
     width: 324px;
-    height: 271px;
+    height: 267px;
 
     &--sunset {
       width: 648px;
       height: 400px;
     }
+  }
+
+  .multimedia__like-icon {
+    background-color: #f2f2f2;
   }
 }
 
@@ -147,5 +167,10 @@
   .multimedia__author,
   .multimedia__likes {
     color: @white;
+  }
+
+  .multimedia__like-icon {
+    fill: @white;
+    background-color: rgba(255, 255, 255, 0);
   }
 }

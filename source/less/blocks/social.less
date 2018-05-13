@@ -27,6 +27,17 @@
   margin: 0;
 
   background-color: @color-main;
+
+  &:hover,
+  &:focus {
+    background-color: @color-main--hover;
+  }
+
+  &:active {
+    color: #99cccc;
+
+    background-color: @color-main--down;
+  }
 }
 
 .social__logo {

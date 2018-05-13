@@ -20,7 +20,7 @@
 
 .advantages-list__number {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
   line-height: 21px;
 }
@@ -37,17 +37,30 @@
   background-color: @color-main;
 
   &--true {
-    padding: 55px 20px 23px 20px;
+    padding: 70px 20px 45px 20px;
+    position: relative;
+    &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    width: 320px;
+    height: 37px;
+
+    background: url("../img/bg-triangle.svg") no-repeat 100% 0;
+    z-index: 100;
+  }
   }
 
   &--bridge {
-    padding: 38px 20px 22px 20px;
+    padding: 37px 20px 40px 20px;
   }
 
   &--small,
   &--road,
   &--empty {
-    padding: 23px 35px 12px 35px;
+    padding: 27px 35px 30px 35px;
 
     color: @black;
 
@@ -62,20 +75,23 @@
 
     &--bridge {
       order: 2;
-      padding: 44px 53px 13px 52px;
+      padding: 44px 50px 13px;
     }
 
     &--true {
-      padding: 47px 40px 23px 40px;
+      padding: 47px 43px 23px;
+      &::before {
+        background: none;
     }
+  }
 
     &--small,
     &--road {
-      padding: 42px 40px 35px 40px;
+      padding: 47px 40px 40px;
     }
 
     &--empty {
-      padding: 42px 50px 35px 50px;
+      padding: 47px 50px 40px;
     }
   }
 
@@ -95,6 +111,10 @@
     width: 512px;
     height: 256px;
   }
+
+  .advantages-list__number {
+    margin-bottom: 23px;
+}
 }
 
 @media (min-width: @desktop-width) {

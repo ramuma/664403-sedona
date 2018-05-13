@@ -36,11 +36,11 @@
 }
 
 .main-nav__item a[href] {
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @color-main--hover;
   }
 
-  &:focus,
   &:active {
     color: #99cccc;
 
@@ -80,6 +80,14 @@
 
     background-color: @white;
   }
+
+  .main-nav__icon-cross {
+    fill: @white;
+  }
+
+  .main-nav__icon-menu {
+    fill: @color-main;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -111,6 +119,20 @@
 
     background-color: @white;
     border: none;
+
+    &--active {
+      color: #766357;
+    }
+
+    &--active:hover,
+    &--active:focus {
+      color: #604e43;
+    }
+
+    &--active:active {
+      color: #766357;
+      opacity: 0.3;
+    }
 
     &--shadow {
       box-shadow: none;

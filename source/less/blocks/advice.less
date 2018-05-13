@@ -1,17 +1,18 @@
 .advice__item {
   padding-bottom: 28px;
+  position: relative;
 }
 
 .advice__title {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 
   font-size: 18px;
 }
 
 .advice__list {
   margin: 0;
-  padding: 20px 20px 20px 70px;
+  padding: 35px 20px 10px 70px;
 
   list-style: none;
   text-align: left;
@@ -23,10 +24,18 @@
   line-height: 21px;
 }
 
+.advice__icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  fill: @color-main;
+}
+
 @media (min-width: @tablet-width) {
   .advice {
     margin: 0;
-    padding: 160px 45px 60px 45px;
   }
 
   .advice__list {
@@ -42,21 +51,24 @@
   .advice__item {
     display: inline-block;
     margin: 0;
-    margin-right: 20px;
+    //margin-right: 20px;
     padding: 0;
 
     vertical-align: middle;
 
     &--accomodation {
       order: 1;
+      padding: 160px 35px 60px;
     }
 
     &--food {
       order: 2;
+      padding: 160px 40px 60px;
     }
 
     &--souvenirs {
       order: 3;
+      padding: 160px 40px 60px;
     }
   }
 
@@ -68,6 +80,14 @@
 
   .advice__description {
     margin: 0;
+  }
+
+  .advice__icon {
+    width: 75px;
+    height: 73px;
+    position: absolute;
+    top: 60px;
+    left: 90px;
   }
 }
 
@@ -100,5 +120,11 @@
 
   .advice__title--food {
     padding-left: 8px;
+  }
+
+  .advice__icon {
+    position: absolute;
+    top: -120px;
+    left: 150px;
   }
 }

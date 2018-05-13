@@ -15,6 +15,21 @@
   background-color: @color-main;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: @color-main--hover;
+  }
+
+  &:active {
+    color: #99cccc;
+
+    background-color: @color-main--down;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
   &--wrong {
     width: 180px;
   }
@@ -27,7 +42,7 @@
 @media (min-width: @tablet-width) {
   .button {
     &--hotels {
-      width: 460px;
+      width: 450px;
       padding: 16px 10px;
     }
 
