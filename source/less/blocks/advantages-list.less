@@ -39,18 +39,19 @@
   &--true {
     padding: 70px 20px 45px 20px;
     position: relative;
+
     &::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 0;
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
 
-    width: 320px;
-    height: 37px;
+      width: 320px;
+      height: 37px;
 
-    background: url("../img/bg-triangle.svg") no-repeat 100% 0;
-    z-index: 100;
-  }
+      background: url("../img/bg-triangle.svg") no-repeat 100% 0;
+      z-index: 100;
+    }
   }
 
   &--bridge {
@@ -80,10 +81,11 @@
 
     &--true {
       padding: 47px 43px 23px;
+
       &::before {
         background: none;
+      }
     }
-  }
 
     &--small,
     &--road {
@@ -114,7 +116,7 @@
 
   .advantages-list__number {
     margin-bottom: 23px;
-}
+  }
 }
 
 @media (min-width: @desktop-width) {
