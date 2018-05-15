@@ -54,6 +54,7 @@
   border: none;
   padding: 0;
   background-color: #f2f2f2;
+  cursor: pointer;
 
   &--replay {
     margin-right: 135px;
@@ -71,7 +72,16 @@
 }
 
 .presentation__icon {
-  fill: #454545;
+  fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -137,6 +147,20 @@
 
   .presentation__icon {
     fill: @white;
+  }
+
+  .presentation__icon,
+  .presentation__button-icon {
+    &:hover,
+    &:focus {
+      fill: @white;
+      fill-opacity: 0.6;
+    }
+
+    &:active {
+      fill: @white;
+      fill-opacity: 0.3;
+    }
   }
 }
 

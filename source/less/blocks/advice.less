@@ -1,6 +1,28 @@
 .advice__item {
-  padding-bottom: 28px;
-  position: relative;
+  padding: 35px 20px 0 70px;
+
+  &--accomodation {
+    background: url(../img/icon-house.svg) no-repeat;
+    background-position: 20px 23px;
+    background-size: 40px;
+  }
+
+  &--souvenirs {
+    padding-top: 25px;
+
+    background: url(../img/icon-gift.svg) no-repeat;
+    background-position: 25px 15px;
+    background-size: 32px;
+  }
+
+  &--food {
+    padding-top: 28px;
+    padding-bottom: 40px;
+
+    background: url(../img/icon-burger.svg) no-repeat;
+    background-position: 20px 23px;
+    background-size: 38px;
+  }
 }
 
 .advice__title {
@@ -12,7 +34,7 @@
 
 .advice__list {
   margin: 0;
-  padding: 35px 20px 10px 70px;
+  padding: 0;
 
   list-style: none;
   text-align: left;
@@ -24,51 +46,36 @@
   line-height: 21px;
 }
 
-.advice__icon {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: -10px;
-  left: -50px;
-  fill: @color-main;
-}
-
 @media (min-width: @tablet-width) {
-  .advice {
-    margin: 0;
-  }
-
   .advice__list {
     display: flex;
-    align-items: center;
     width: 100%;
-    margin: 0;
-    padding: 0;
 
     text-align: center;
   }
 
   .advice__item {
-    display: inline-block;
     margin: 0;
-    //margin-right: 20px;
     padding: 0;
-
-    vertical-align: middle;
+    padding: 160px 40px 60px;
 
     &--accomodation {
       order: 1;
-      padding: 160px 35px 60px;
+      padding-right: 30px;
+      background-position: 90px 60px;
+      background-size: 75px;
     }
 
     &--food {
       order: 2;
-      padding: 160px 40px 60px;
+      background-position: 92px 60px;
+      background-size: 77px 72px;
     }
 
     &--souvenirs {
       order: 3;
-      padding: 160px 40px 60px;
+      background-position: 86px 60px;
+      background-size: 65px 74px;
     }
   }
 
@@ -81,50 +88,34 @@
   .advice__description {
     margin: 0;
   }
-
-  .advice__icon {
-    width: 75px;
-    height: 73px;
-    position: absolute;
-    top: 60px;
-    left: 90px;
-  }
 }
 
 @media (min-width: @desktop-width) {
-  /*.advice {
-    padding-right: 20px;
-    padding-bottom: 70px;
-  }*/
-
   .advice__item {
     display: inline-block;
     margin: 0;
-    padding: 160px 70px 80px;
+    padding: 160px 70px 85px;
 
     vertical-align: middle;
 
     &--accomodation {
-      padding-left: 60px;
+      padding-left: 55px;
+      background-position: 160px 60px;
     }
 
     &--food {
       padding-right: 50px;
-      padding-left: 60px;
+      padding-left:30px;
+      background-position: 145px 60px;
     }
 
     &--souvenirs {
-      padding-left: 85px;
+      padding-left: 75px;
+      background-position: 170px 60px;
     }
   }
 
   .advice__title--food {
     padding-left: 8px;
-  }
-
-  .advice__icon {
-    position: absolute;
-    top: 60px;
-    left: 160px;
   }
 }

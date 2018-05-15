@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона: форма отзыва</title>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
 
   </script>
   <script src="js/picturefill.min.js" async></script>
-  <!-- Pixel Glass
+  <!-- Pixel Glass-
 <style>
   HTML {
     background-repeat: no-repeat;
@@ -114,7 +116,7 @@
     <div class="intro--photo ">
       <img class="intro__image--photo" src="img/text-sedona.svg" alt="Welcome to the gorgeous Sedona!" width="230" height="40">
     </div>
-    <section class="feedback text-block text-block--form">
+    <section class="text-block text-block--form">
       <h2 class="text-block__title text-block__title--form">Оставьте свой отзыв</h2>
       <p class="text-block__intro text-block__intro--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </section>
@@ -148,17 +150,21 @@
           <div class="feedback-form__item feedback-form__item--contact">
             <label class="feedback-form__label feedback-form__label--contact" for="user-phone">
               <span class="feedback-form__label--hide">
-                Контактный</span>телефон*:
+                Контактный </span>телефон*:
             </label>
+            <p class="feedback-form__input-wrapper feedback-form__input-wrapper--phone">
             <input class="feedback-form__field feedback-form__field--contact" id="user-phone" type="tel" name="user-phone" placeholder="Введите телефон"
               required>
+            </p>
           </div>
           <div class="feedback-form__item feedback-form__item--contact">
             <label class="feedback-form__label feedback-form__label--contact" for="user-email">
               Электронная почта*:
             </label>
+            <p class="feedback-form__input-wrapper feedback-form__input-wrapper--email">
             <input class="feedback-form__field feedback-form__field--contact" id="user-email" type="email" name="user-email" placeholder="Введите e-mail"
               required>
+            </p>
           </div>
         </div>
       </fieldset>
