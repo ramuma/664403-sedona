@@ -10,8 +10,9 @@
 }
 
 .multimedia__item {
-  text-align: left;
   margin-bottom: 22px;
+
+  text-align: left;
 
   &:last-child {
     margin-bottom: 0;
@@ -25,6 +26,7 @@
 
 .multimedia__description {
   padding: 17px 30px 15px 20px;
+
   border-bottom: 1px solid @color-grey;
 }
 
@@ -47,8 +49,9 @@
 .multimedia__like-wrapper {
   display: flex;
   justify-content: flex-start;
-  vertical-align: middle;
   width: 65px;
+
+  vertical-align: middle;
 }
 
 .multimedia__likes {
@@ -63,9 +66,10 @@
   height: 20px;
   margin-right: 14px;
   padding: 0;
+
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  background-color: transparent;
 }
 
 .multimedia__like-icon {
@@ -98,6 +102,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px 17px;
+
     border-bottom: none;
   }
 
@@ -161,18 +166,19 @@
     background-color: rgba(0, 0, 0, 0.3);
 
     &--small {
-      padding-right: 30px;
       padding-top: 20px;
+      padding-right: 30px;
     }
   }
 
   .multimedia__like-wrapper {
-    justify-content: space-around;    
+    justify-content: space-around;
   }
 
   .multimedia__like {
-    background-color: rgba(255, 255, 255, 0);
     margin: 0;
+
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .multimedia__name,
@@ -182,7 +188,8 @@
   }
 
   .multimedia__like-icon {
-    fill: @white;
     background-color: rgba(255, 255, 255, 0);
+
+    fill: @white;
   }
 }

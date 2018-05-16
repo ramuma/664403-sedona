@@ -1,8 +1,8 @@
 .presentation__video {
   position: relative;
-  padding-bottom: 45px;
 
   min-height: 263px;
+  padding-bottom: 45px;
 }
 
 .presentation__img {
@@ -10,21 +10,23 @@
 }
 
 .presentation__controls {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   bottom: 44px;
   left: 20px;
 
+  display: flex;
+  flex-direction: column;
   width: 280px;
 }
 
 .presentation__bar {
   position: relative;
-  width: 280px;
-  padding: 30px 15px 20px;
-  margin: 0;
+
   box-sizing: border-box;
+  width: 280px;
+  margin: 0;
+  padding: 30px 15px 20px;
+
   background-color: rgba(0, 0, 0, 0.6);
 
   &::before {
@@ -32,8 +34,10 @@
     position: absolute;
     bottom: 17px;
     left: 58px;
+
     width: 9px;
     height: 9px;
+
     background-color: @white;
     border-radius: 50%;
     cursor: pointer;
@@ -44,17 +48,20 @@
     position: absolute;
     bottom: 20px;
     left: 22px;
+
     width: 235px;
     height: 3px;
+
     background-color: @white;
     opacity: 0.2;
   }
 }
 
 .presentation__button-icon {
-  border: none;
   padding: 0;
+
   background-color: #f2f2f2;
+  border: none;
   cursor: pointer;
 
   &--replay {
@@ -67,8 +74,9 @@
 }
 
 .presentation__icons {
-  padding: 19px 23px;
   display: flex;
+  padding: 19px 23px;
+
   background-color: #f2f2f2;
 }
 
@@ -102,21 +110,22 @@
   }
 
   .presentation__controls {
-    flex-direction: row;
     position: absolute;
     bottom: 0;
     left: 60px;
 
+    flex-direction: row;
+    box-sizing: border-box;
     width: 648px;
     padding: 22px 18px 10px 70px;
-    box-sizing: border-box;
 
     background-color: rgba(0, 0, 0, 0.6);
   }
 
   .presentation__bar {
-    background-color: transparent;
     width: 486px;
+
+    background-color: transparent;
 
     &::before {
       content: "";
@@ -125,14 +134,16 @@
     }
 
     &::after {
-      width: 388px;
       bottom: 30px;
+
+      width: 388px;
     }
   }
 
   .presentation__icons {
-    background-color: transparent;
     position: relative;
+
+    background-color: transparent;
   }
 
   .presentation__button-icon {
@@ -140,10 +151,11 @@
 
     &--replay {
       position: absolute;
-      right: 580px;
       top: 14px;
-      padding: 0;
+      right: 580px;
+
       margin-right: 0;
+      padding: 0;
     }
   }
 
@@ -190,8 +202,9 @@
   }
 
   .presentation__bar {
-    background-color: transparent;
     width: 620px;
+
+    background-color: transparent;
 
     &::before {
       content: "";
@@ -205,7 +218,7 @@
   }
 
   .presentation__video {
-    padding-bottom: 0;
     margin-bottom: 85px;
+    padding-bottom: 0;
   }
 }

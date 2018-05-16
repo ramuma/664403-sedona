@@ -37,20 +37,21 @@
   background-color: @color-main;
 
   &--true {
-    padding: 70px 20px 45px 20px;
     position: relative;
+
+    padding: 70px 20px 45px 20px;
 
     &::before {
       content: "";
       position: absolute;
       top: -5px;
       left: 0;
+      z-index: 100;
 
       width: 320px;
       height: 37px;
 
       background: url("../img/bg-triangle.svg") no-repeat 100% 0;
-      z-index: 100;
     }
   }
 
