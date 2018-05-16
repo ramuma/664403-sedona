@@ -1,5 +1,5 @@
 .feedback-form {
-  padding-bottom: 45px;
+  padding-bottom: 40px;
 }
 
 .feedback-form__list,
@@ -14,7 +14,7 @@
   position: relative;
 
   margin-bottom: 10px;
-  padding: 16px 17px 27px 85px;
+  padding: 16px 17px 27px 80px;
 
   text-align: left;
 
@@ -30,7 +30,8 @@
   font-weight: bold;
   font-size: 18px;
 
-  &--impression {
+  &--impression,
+  &--textarea {
     margin-bottom: 20px;
   }
 
@@ -38,7 +39,6 @@
     margin-bottom: 15px;
   }
 
-  &--textarea,
   &--feedback {
     margin-bottom: 25px;
   }
@@ -51,7 +51,7 @@
   box-sizing: border-box;
   width: 280px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   &--contact {
     flex-direction: column;
@@ -64,14 +64,14 @@
   }
 
   &--name {
-    width: 260px;
+    width: 280px;
   }
 }
 
 .feedback-form__field {
   flex-grow: 1;
   min-width: 1px;
-  padding: 15px 20px;
+  padding: 15px 22px;
 
   font-weight: 700;
   font-size: 18px;
@@ -98,6 +98,10 @@
     background-color: @white;
     border: 3px solid #e5e5e5;
     padding: 12px 17px;
+  }
+
+  &--contact {
+    padding: 15px 20px;
   }
 }
 
@@ -148,7 +152,7 @@
   }
 
   &--name {
-    margin-right: 5px;
+    margin-right: 12px;
   }
 }
 
@@ -156,13 +160,17 @@
   position: relative;
 
   padding: 16px 17px 27px 78px;
+
+  &:last-child {
+    padding-bottom: 40px;
+  }
 }
 
 .feedback-form__input--radio + label::before {
   content: "";
   position: absolute;
-  bottom: 10px;
-  left: 5px;
+  bottom: 18px;
+  left: 0;
 
   display: inline-block;
   width: 55px;
@@ -181,6 +189,8 @@
 .feedback-form__input--radio + label:focus::before,
 .feedback-form__input--checkbox + label:focus::before {
   background-color: #e5e5e5;
+  outline: 5px auto;
+  outline-color: inherit;
 }
 
 .feedback-form__input--radio + label:active::before,
@@ -192,7 +202,7 @@
   content: "";
   position: absolute;
   bottom: 10px;
-  left: 5px;
+  left: 0;
 
   display: inline-block;
   width: 22px;
@@ -243,7 +253,7 @@
   width: 23px;
   height: 16px;
   left: 17px;
-  top: 25px;
+  top: 22px;
   background: url("../img/icon-tick.svg") no-repeat;
 }
 
@@ -265,7 +275,7 @@
 
 .feedback-form__textarea {
   width: 275px;
-  min-height: 155px;
+  min-height: 135px;
   padding: 12px 17px;
 
   font-weight: 700;
@@ -311,7 +321,7 @@
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding: 0 60px 30px;
+    padding: 0 60px 55px;
 
     &--bottom {
       display: flex;
@@ -333,6 +343,7 @@
       width: 50%;
       margin: 0;
       padding-left: 110px;
+      padding-bottom: 45px;
 
       &:last-child {
         margin: 0;
@@ -396,7 +407,7 @@
       &:before {
         content: "";
         position: absolute;
-        top: 12px;
+        top: 22px;
         left: -180px;
         width: 125px;
         height: 1px;
@@ -406,7 +417,7 @@
       &:after {
         content: "";
         position: absolute;
-        top: 12px;
+        top: 22px;
         right: -240px;
         width: 125px;
         height: 1px;
@@ -462,7 +473,7 @@
   }
 
   .feedback-form__line {
-    padding-left: 35px;
+    padding: 20px 17px 28px 30px; 
   }
 
   .feedback-form__label {
@@ -471,11 +482,12 @@
       align-items: center;
       margin: 0;
       padding: 0;
-      padding-right: 10px;
+      padding-right: 13px;
     }
 
     &--contact {
       padding-left: 20px;
+      margin-bottom: 5px;
     }
   }
 
@@ -486,7 +498,7 @@
 
   .feedback-form__field--contact {
     box-sizing: border-box;
-    width: 648px;
+    width: 590px;
   }
 
   .feedback-form__obligatory {
@@ -507,12 +519,12 @@
       box-sizing: border-box;
       width: 267px;
       margin: 0;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       padding: 0;
     }
 
     &--contact {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       padding: 0;
     }
   }
@@ -535,12 +547,13 @@
 
   .feedback-form__textarea {
     width: 100%;
+    padding-top: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .feedback-form {
-    padding-bottom: 70px;
+    padding-bottom: 65px;
   }
 
   .feedback-form--contact-wrapper {
@@ -648,7 +661,7 @@
     }
 
     &--contact {
-      max-width: 318px;
+      max-width: 260px;
     }
   }
 
@@ -670,20 +683,23 @@
     }
   }
 
+  .feedback-form__list--container {
+    width: 100%;
+  }
+
   .feedback-form__list--sights {
     justify-content: space-between;
     width: 25%;
     margin: 0;
-    padding-left: 105px;
+    padding-right: 0;
+    padding-left: 115px;
 
     &:first-child {
       padding-left: 80px;
     }
 
-    &:last-child {
-      margin: 0;
-      padding-right: 0;
-      padding-left: 115px;
+    &:nth-child(2) {
+      padding-left: 100px;
     }
   }
 
@@ -705,5 +721,27 @@
 
   .feedback-form__textarea {
     width: 960px;
+  }
+
+  .feedback-form__line {
+    padding: 18px 17px 33px 5px;
+  }
+
+  .feedback-form__input--radio + label::before {
+    content: "";
+    position: absolute;
+    bottom: 22px;
+    left: 10px;
+  
+    margin: 0;
+  }
+  
+  .feedback-form__input--radio:checked + label::before {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+  
+    margin: 0;
   }
 }

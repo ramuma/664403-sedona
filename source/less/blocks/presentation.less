@@ -1,5 +1,6 @@
 .presentation__video {
   position: relative;
+  padding-bottom: 45px;
 
   min-height: 263px;
 }
@@ -12,7 +13,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 0;
+  bottom: 44px;
   left: 20px;
 
   width: 280px;
@@ -21,8 +22,8 @@
 .presentation__bar {
   position: relative;
   width: 280px;
-  padding: 23px 15px 20px;
-  margin: auto;
+  padding: 30px 15px 20px;
+  margin: 0;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.6);
 
@@ -119,12 +120,13 @@
 
     &::before {
       content: "";
-      bottom: 17px;
+      bottom: 27px;
       left: 135px;
     }
 
     &::after {
       width: 388px;
+      bottom: 30px;
     }
   }
 
@@ -193,12 +195,17 @@
 
     &::before {
       content: "";
-      bottom: 17px;
+      bottom: 30px;
       left: 135px;
     }
 
     &::after {
       width: 540px;
     }
+  }
+
+  .presentation__video {
+    padding-bottom: 0;
+    margin-bottom: 85px;
   }
 }
