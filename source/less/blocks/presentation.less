@@ -11,7 +11,7 @@
 
 .presentation__controls {
   position: absolute;
-  bottom: 44px;
+  bottom: 41px;
   left: 20px;
 
   display: flex;
@@ -25,7 +25,7 @@
   box-sizing: border-box;
   width: 280px;
   margin: 0;
-  padding: 30px 15px 20px;
+  padding: 26px 15px 20px;
 
   background-color: rgba(0, 0, 0, 0.6);
 
@@ -75,7 +75,7 @@
 
 .presentation__icons {
   display: flex;
-  padding: 19px 23px;
+  padding: 19px 23px 23px;
 
   background-color: #f2f2f2;
 }
@@ -100,24 +100,21 @@
 
   .presentation__video {
     position: relative;
-    padding-bottom: 0;
-  }
 
-  .presentation__img {
     width: 648px;
-    height: 503px;
     margin: 0 auto;
-    padding: 0 40px;
+    margin-bottom: 45px;
+    padding-bottom: 0;
   }
 
   .presentation__controls {
     position: absolute;
     bottom: 0;
-    left: 60px;
+    left: 0;
 
     flex-direction: row;
     box-sizing: border-box;
-    width: 648px;
+    width: 100%;
     padding: 22px 18px 10px 70px;
 
     background-color: rgba(0, 0, 0, 0.6);
@@ -180,18 +177,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  .presentation__img {
+  .presentation__video {
     width: 800px;
-    height: 503px;
+    margin: 0 auto;
+    margin-bottom: 90px;
   }
 
   .presentation__controls {
     position: absolute;
     bottom: 0;
-    left: 200px;
-
-    width: 800px;
-    min-height: 94px;
+    left: 0;
 
     background-color: rgba(0, 0, 0, 0.6);
   }
@@ -216,9 +211,5 @@
     &::after {
       width: 540px;
     }
-  }
-
-  .presentation__video {
-    margin-bottom: 85px;
   }
 }

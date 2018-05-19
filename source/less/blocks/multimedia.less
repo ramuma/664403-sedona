@@ -25,7 +25,7 @@
 }
 
 .multimedia__description {
-  padding: 17px 30px 15px 20px;
+  padding: 17px 30px 16px 20px;
 
   border-bottom: 1px solid @color-grey;
 }
@@ -88,9 +88,14 @@
   }
 
   .multimedia__item {
+    width: 648px;
     margin: 0;
 
     background-color: #f2f2f2;
+
+    &--small {
+      width: 324px;
+    }
   }
 
   .multimedia__link {
@@ -108,16 +113,6 @@
 
   .multimedia__author {
     margin: 0;
-  }
-
-  .multimedia__image {
-    width: 324px;
-    height: 267px;
-
-    &--sunset {
-      width: 648px;
-      height: 400px;
-    }
   }
 
   .multimedia__like {
@@ -141,16 +136,11 @@
 
   .multimedia__item {
     position: relative;
-  }
 
-  .multimedia__image {
-    display: block;
-    width: 400px;
-    height: 270px;
+    width: 1200px;
 
-    &--sunset {
-      width: 1200px;
-      height: 398px;
+    &--small {
+      width: 400px;
     }
   }
 
