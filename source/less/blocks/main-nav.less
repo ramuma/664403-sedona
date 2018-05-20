@@ -14,15 +14,13 @@
 }
 
 .main-nav__link {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
-  min-width: 320px;
   padding: 8px 10px 6px;
 
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
-  vertical-align: center;
   color: @white;
   text-decoration: none;
 
@@ -72,6 +70,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  visibility: hidden;
 
   &--toggle {
     position: static;
