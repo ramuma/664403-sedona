@@ -10,23 +10,25 @@
 
   &--wrong {
     bottom: 230px;
-    left: 40px;
+    left: 0;
     z-index: 104;
 
     display: none;
   }
 
   &--success {
-    bottom: 340px;
-    left: 40px;
+    bottom: 240px;
+    left: 0;
     z-index: 104;
 
-    display: none;
+  display: none;
   }
 }
 
 @media (min-width: @tablet-width) {
   .popup {
+    box-shadow: 0 0 19px 0 rgba(0, 1, 1, 0.15);
+
     &--wrong {
       left: 185px;
 
