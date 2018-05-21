@@ -15,7 +15,8 @@
   left: 20px;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 280px;
 }
 
@@ -74,10 +75,24 @@
 }
 
 .presentation__icons {
-  display: flex;
-  padding: 19px 23px 23px;
+  padding: 22px 0 16px;
+  box-sizing: border-box;
 
   background-color: #f2f2f2;
+
+   &--replay {
+     width: 140px;
+     padding-left: 25px;
+   }
+
+   &--fullscreen {
+    width: 70px;
+  }
+
+  &--subtitles {
+    width: 70px;
+    padding-left: 35px;
+  }
 }
 
 .presentation__icon {
@@ -103,7 +118,7 @@
 
     width: 648px;
     margin: 0 auto;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     padding-bottom: 0;
   }
 
@@ -113,45 +128,56 @@
     left: 0;
 
     flex-direction: row;
+    justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
-    padding: 22px 18px 10px 70px;
+    padding: 33px 40px 15px 35px;
 
     background-color: rgba(0, 0, 0, 0.6);
   }
 
   .presentation__bar {
-    width: 486px;
+    width: 400px;
 
     background-color: transparent;
 
     &::before {
       content: "";
       bottom: 27px;
-      left: 135px;
+      left: 120px;
     }
 
     &::after {
       bottom: 30px;
+      left: 10px;
 
       width: 388px;
     }
   }
 
   .presentation__icons {
-    position: relative;
-
     background-color: transparent;
+    padding: 0;
+
+    &--replay {
+      order: -1;
+      width: 16px;
+    }
+
+    &--subtitles { 
+      width: 32px;
   }
+
+  &--fullscreen { 
+    width: 20px;
+}
+}
 
   .presentation__button-icon {
     background-color: transparent;
+    margin: 0;
 
     &--replay {
-      position: absolute;
-      top: 14px;
-      right: 580px;
-
       margin-right: 0;
       padding: 0;
     }
@@ -180,7 +206,7 @@
   .presentation__video {
     width: 800px;
     margin: 0 auto;
-    margin-bottom: 90px;
+    margin-bottom: 85px;
   }
 
   .presentation__controls {
@@ -198,17 +224,18 @@
   }
 
   .presentation__bar {
-    width: 620px;
+    width: 545px;
 
     background-color: transparent;
 
     &::before {
       content: "";
       bottom: 27px;
-      left: 135px;
+      left: 120px;
     }
 
     &::after {
+      left: 5px;
       width: 540px;
     }
   }
