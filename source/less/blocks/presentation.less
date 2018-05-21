@@ -75,17 +75,17 @@
 }
 
 .presentation__icons {
-  padding: 22px 0 16px;
   box-sizing: border-box;
+  padding: 22px 0 16px;
 
   background-color: #f2f2f2;
 
-   &--replay {
-     width: 140px;
-     padding-left: 25px;
-   }
+  &--replay {
+    width: 140px;
+    padding-left: 25px;
+  }
 
-   &--fullscreen {
+  &--fullscreen {
     width: 70px;
   }
 
@@ -156,26 +156,28 @@
   }
 
   .presentation__icons {
-    background-color: transparent;
     padding: 0;
+
+    background-color: transparent;
 
     &--replay {
       order: -1;
       width: 16px;
     }
 
-    &--subtitles { 
+    &--subtitles {
       width: 32px;
+    }
+
+    &--fullscreen {
+      width: 20px;
+    }
   }
 
-  &--fullscreen { 
-    width: 20px;
-}
-}
-
   .presentation__button-icon {
-    background-color: transparent;
     margin: 0;
+
+    background-color: transparent;
 
     &--replay {
       margin-right: 0;
@@ -236,6 +238,7 @@
 
     &::after {
       left: 5px;
+
       width: 540px;
     }
   }
