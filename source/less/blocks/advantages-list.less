@@ -68,6 +68,23 @@
 
     background-color: #eeeeee;
   }
+
+  &--small,
+  &--road {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+
+      width: 280px;
+      height: 1px;
+
+      background-color: #d6d6d6;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -92,6 +109,11 @@
     &--road,
     &--empty {
       padding: 45px 10px 45px;
+    }
+
+    &--small,
+    &--road {
+      position: static;
     }
   }
 
