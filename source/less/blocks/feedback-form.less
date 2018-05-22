@@ -100,27 +100,26 @@
     outline: none;
     box-shadow: 0 0 0 3px #d6d6d6 inset;
   }
-}
 
-.feedback-form__field--contact {
-  width: 100%;
+  &--contact {
+    width: 221px;
+  }
 }
 
 .feedback-form__input-wrapper {
   position: relative;
 
-  width: 100%;
+  width: 221px;
   margin: 0;
 
   &::before {
     content: "";
     position: absolute;
-    top: 3px;
-    right: 3px;
-    z-index: 2;
+    top: 0;
+    right: -56px;
 
-    width: 53px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
 
     background-color: #e6e6e6;
   }
@@ -130,7 +129,7 @@
       content: "";
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: -37px;
       z-index: 2;
 
       width: 18px;
@@ -146,7 +145,7 @@
       content: "";
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: -37px;
       z-index: 2;
 
       width: 18px;
@@ -299,6 +298,7 @@
 
 .feedback-form__label--radio {
   padding: 16px 17px 18px 78px;
+
   outline: none;
 }
 
@@ -347,9 +347,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 100%;
-    margin: 0;
-    padding: 0 60px 60px;
+    width: 648px;
+    margin: 0 auto;
+    padding-bottom: 60px;
 
     &--bottom {
       display: flex;
@@ -546,13 +546,20 @@
     }
   }
 
-  .feedback-form__field--name {
-    flex-grow: 1;
-    overflow: hidden;
+  .feedback-form__field {
+    &--name {
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    &--contact {
+      box-sizing: border-box;
+      width: 592px;
+    }
   }
 
-  .feedback-form__field--contact {
-    box-sizing: border-box;
+  .feedback-form__input-wrapper {
+    width: 592px;
   }
 
   .feedback-form__obligatory {
@@ -607,6 +614,8 @@
 
 @media (min-width: @desktop-width) {
   .feedback-form {
+    width: 960px;
+    margin: 0 auto;
     padding-bottom: 65px;
   }
 
@@ -682,7 +691,7 @@
 
   .feedback-form__label {
     &--radio {
-      padding: 20px 17px 15px 88px;
+      padding: 20px 17px 15px 83px;
     }
 
     &--hide {
@@ -729,7 +738,7 @@
     }
 
     &--contact {
-      width: 315px;
+      width: 258px;
     }
   }
 
@@ -753,7 +762,7 @@
   }
 
   .feedback-form__input-wrapper {
-    width: 315px;
+    width: 258px;
   }
 
   .feedback-form__list--container {
@@ -778,7 +787,7 @@
   .feedback-form__list--radio::after {
     content: "";
     position: absolute;
-    right: -10px;
+    right: 0;
     bottom: -15px;
 
     width: 1px;
