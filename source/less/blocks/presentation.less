@@ -1,7 +1,7 @@
 .presentation__video {
   position: relative;
 
-  padding-bottom: 106px;
+  padding-bottom: 40px;
 }
 
 .presentation__img {
@@ -9,19 +9,17 @@
 }
 
 .presentation__controls {
-  position: absolute;
-  bottom: 40px;
-  left: 20px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 280px;
-  min-height: 110px;
+  margin: 0 auto;
 }
 
 .presentation__range-controls {
-  position: relative;
+  position: absolute;
+  bottom: 105px;
+  left: 20px;
 
   display: flex;
   justify-content: center;
@@ -106,7 +104,7 @@
   }
 
   .presentation__video {
-    position: relative;
+   position: relative;
 
     width: 648px;
     margin: 0 auto;
@@ -131,29 +129,33 @@
   }
 
   .presentation__range-controls {
-    position: relative;
+    position: absolute;
+    bottom: 45px;
+    left: 90px;
     padding: 0;
+    width: 395px;
+    background-color: transparent;
   }
 
   .presentation__bar {
-    position: absolute;
-    top: 45px;
-    left: 50px;
+    //position: absolute;
+    //top: 45px;
+    //left: 50px;
 
     width: 395px;
   }
 
   .presentation__toggle {
-    position: absolute;
-    top: 42px;
-    left: 170px;
+    //position: absolute;
+   top: -3px;
+    left: 115px;
 
-    width: 9px;
-    height: 9px;
+    //width: 9px;
+    //height: 9px;
 
-    background-color: @white;
-    border-radius: 50%;
-    cursor: pointer;
+    //background-color: @white;
+   // border-radius: 50%;
+    //cursor: pointer;
   }
 
   .presentation__buttons {
@@ -162,8 +164,8 @@
     align-items: center;
     width: 100%;
     padding: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 35px;
+    padding-bottom: 25px;
 
     background-color: transparent;
   }
