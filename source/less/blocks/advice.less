@@ -7,7 +7,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 20px;
+      top: 23px;
       left: 20px;
 
       width: 39px;
@@ -26,7 +26,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 17px;
+      top: 14px;
       left: 25px;
 
       width: 33px;
@@ -46,7 +46,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 22px;
+      top: 23px;
       left: 20px;
 
       width: 39px;
@@ -87,23 +87,24 @@
   }
 
   .advice__item {
+    position: static;
+
     box-sizing: border-box;
     width: 256px;
     margin: 0;
     padding: 60px 20px 60px;
-    position: static;
 
     &--accomodation {
       order: 1;
 
       &::before {
         position: static;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 28px;
 
+        display: block;
         width: 75px;
         height: 73px;
+        margin: 0 auto;
+        margin-bottom: 25px;
       }
     }
 
@@ -112,12 +113,12 @@
 
       &::before {
         position: static;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 31px;
 
+        display: block;
         width: 77px;
         height: 69px;
+        margin: 0 auto;
+        margin-bottom: 28px;
       }
     }
 
@@ -126,12 +127,12 @@
 
       &::before {
         position: static;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 27px;
 
+        display: block;
         width: 63px;
         height: 75px;
+        margin: 0 auto;
+        margin-bottom: 24px;
       }
     }
   }
@@ -156,7 +157,7 @@
   .advice__item {
     width: 400px;
     margin: 0;
-    padding: 60px 15px 80px 10px;
+    padding: 60px 15px 80px 15px;
 
     &--accomodation {
       &::before {
@@ -165,8 +166,6 @@
     }
 
     &--food {
-      padding-left: 20px;
-
       &::before {
         left: 165px;
       }
@@ -180,12 +179,16 @@
   }
 
   .advice__title {
-    width: 60px;
+    width: 70px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 
     &--souvenirs {
-      width: 90px;
+      width: 100px;
+    }
+
+    &--food {
+      width: 45px;
     }
   }
 
@@ -194,7 +197,11 @@
     margin: 0 auto;
 
     &--souvenirs {
-      width: 197px;
+      width: 220px;
+    }
+
+    &--break {
+      display: block;
     }
   }
 }

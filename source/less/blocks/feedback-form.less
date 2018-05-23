@@ -1,5 +1,5 @@
 .feedback-form {
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 }
 
 .feedback-form__list,
@@ -36,7 +36,7 @@
   }
 
   &--sights {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   &--feedback {
@@ -129,7 +129,7 @@
       content: "";
       position: absolute;
       top: 20px;
-      right: -37px;
+      right: -39px;
       z-index: 2;
 
       width: 18px;
@@ -145,7 +145,7 @@
       content: "";
       position: absolute;
       top: 20px;
-      right: -37px;
+      right: -39px;
       z-index: 2;
 
       width: 18px;
@@ -164,7 +164,7 @@
   }
 
   &--name {
-    margin-right: 12px;
+    margin-right: 16px;
   }
 
   &--checkbox {
@@ -305,7 +305,7 @@
 .feedback-form__textarea {
   width: 275px;
   min-height: 135px;
-  padding: 12px 17px;
+  padding: 14px 20px;
 
   font-weight: 700;
   font-size: 18px;
@@ -437,7 +437,7 @@
       &::before {
         content: "";
         position: absolute;
-        top: 22px;
+        top: 24px;
         left: -180px;
 
         width: 125px;
@@ -449,7 +449,7 @@
       &::after {
         content: "";
         position: absolute;
-        top: 22px;
+        top: 24px;
         right: -240px;
 
         width: 125px;
@@ -506,7 +506,7 @@
     content: "";
     position: absolute;
     top: 20px;
-    left: 15px;
+    left: 19px;
   }
 
   .feedback-form__line {
@@ -549,17 +549,28 @@
   .feedback-form__field {
     &--name {
       flex-grow: 1;
+      padding: 15px 26px;
       overflow: hidden;
     }
 
     &--contact {
       box-sizing: border-box;
       width: 592px;
+      padding: 17px 22px 15px;
     }
   }
 
   .feedback-form__input-wrapper {
     width: 592px;
+
+    &::before {
+      width: 58px;
+      height: 58px;
+    }
+
+    &::after {
+      right: -36px;
+    }
   }
 
   .feedback-form__obligatory {
@@ -579,7 +590,7 @@
     &--name {
       width: 267px;
       margin: 0;
-      margin-bottom: 23px;
+      margin-bottom: 22px;
       padding: 0;
     }
 
@@ -616,7 +627,7 @@
   .feedback-form {
     width: 960px;
     margin: 0 auto;
-    padding-bottom: 65px;
+    padding-bottom: 68px;
   }
 
   .feedback-form--contact-wrapper {
@@ -627,7 +638,7 @@
 
   .feedback-form__title {
     &--impression {
-      width: 310px;
+      width: 320px;
       margin: 0 auto;
       margin-bottom: 75px;
 
@@ -635,7 +646,7 @@
     }
 
     &--contact {
-      margin-bottom: 75px;
+      margin-bottom: 73px;
 
       &::before {
         content: "";
@@ -691,7 +702,7 @@
 
   .feedback-form__label {
     &--radio {
-      padding: 20px 17px 15px 83px;
+      padding: 20px 17px 15px 80px;
     }
 
     &--hide {
@@ -699,6 +710,7 @@
     }
 
     &--contact {
+      width: 165px;
       margin: 0;
       padding: 0;
 
@@ -715,7 +727,7 @@
     }
 
     &--phone {
-      width: 90px;
+      width: 85px;
     }
   }
 
@@ -740,6 +752,10 @@
     &--contact {
       width: 258px;
     }
+
+    &--long {
+      padding-left: 22px;
+    }
   }
 
   .feedback-form__item {
@@ -763,6 +779,11 @@
 
   .feedback-form__input-wrapper {
     width: 258px;
+
+    &::before {
+      width: 58px;
+      height: 58px;
+    }
   }
 
   .feedback-form__list--container {
@@ -798,14 +819,14 @@
 
   .feedback-form__textarea {
     width: 960px;
-    padding-left: 25px;
+    padding-bottom: 12px;
   }
 
   .feedback-form__input--radio + label::before {
     content: "";
     position: absolute;
     bottom: -10px;
-    left: 10px;
+    left: 5px;
 
     margin: 0;
   }
@@ -814,7 +835,7 @@
     content: "";
     position: absolute;
     bottom: -10px;
-    left: 10px;
+    left: 5px;
 
     margin: 0;
   }

@@ -14,32 +14,6 @@
 
   </script>
   <script src="js/picturefill.min.js" async></script>
-  <!-- // Pixel Glass
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* Mobile layout by default */
-    background-image: url( "img/sedona-index-mobile.jpg" );
-  }
-  /* Tablet */
-  @media ( min-width: 768px ) {
-    HTML {
-      /* Tablet layout */
-      background-image: url( "img/sedona-index-tablet.jpg" );
-    }
-  }
-  /* Desktop */
-  @media ( min-width: 1200px ) {
-    HTML {
-      /* Desktop layout */
-      background-image: url( "img/sedona-index-desktop.jpg" );
-    }
-  }
-</style>
-<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-<script src="../node_modules/pixel-glass/script.js"></script>
-// Pixel Glass -->
 </head>
 
 <body>
@@ -120,7 +94,7 @@
         <img class="intro__image--index" src="img/text-sedona-index.svg" alt="Welcome to the gorgeous Sedona!" width="280" height="212">
       </div>
       <section class="text-block text-block--advantages">
-        <h2 class="text-block__title">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="text-block__title text-block__title--advantages">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="text-block__intro text-block__intro--advantages">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
       <section class="advantages-list">
@@ -151,7 +125,8 @@
             </li>
             <li class="advice__item advice__item--souvenirs">
               <h3 class="advice__title advice__title--souvenirs">Сувениры</h3>
-              <p class="advice__description advice__description--souvenirs">Не только китайского, но и местного производства!</p>
+              <p class="advice__description advice__description--souvenirs">
+                <span class="advice__description--break">Не только китайского,</span> но и местного производства!</p>
             </li>
             <li class="advice__item advice__item--food">
               <h3 class="advice__title advice__title--food">Еда</h3>
