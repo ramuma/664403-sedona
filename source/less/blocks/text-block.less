@@ -8,18 +8,23 @@
 
   &--hotels {
     padding: 0 20px;
-    padding-top: 25px;
-    padding-bottom: 50px;
+    padding-top: 27px;
+    padding-bottom: 48px;
   }
 
   &--presentation {
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 35px;
   }
 
-  &--photo,
+  &--photo {
+    padding: 35px 23px 27px;
+
+    border-bottom: 1px solid @color-grey;
+  }
+
   &--form {
-    padding: 35px 20px 27px;
+    padding: 35px 10px 15px;
 
     border-bottom: 1px solid @color-grey;
   }
@@ -28,10 +33,6 @@
     z-index: 104;
 
     padding: 45px 55px 35px 55px;
-  }
-
-  &--success {
-    padding-bottom: 45px;
   }
 }
 
@@ -65,7 +66,7 @@
   line-height: 26px;
 
   &--hotels {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     line-height: 24px;
   }
@@ -79,69 +80,93 @@
 
   &--wrong {
     margin-bottom: 35px;
+
+    line-height: 24px;
   }
 
   &--success {
-    margin-bottom: 35px;
     padding: 0 40px;
+    padding-bottom: 35px;
+
+    line-height: 24px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .text-block {
-    width: 500px;
+    box-sizing: border-box;
+    width: 520px;
     margin: 0 auto;
     padding: 0 40px;
 
     &--photo {
-      padding-top: 75px;
-      padding-bottom: 70px;
+      padding: 75px 40px 70px;
+
       border: none;
     }
 
     &--hotels {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding: 54px 20px 60px;
     }
 
     &--form {
       padding-top: 75px;
-      padding-bottom: 60px;
+      padding-bottom: 75px;
 
       border: none;
     }
 
     &--advantages {
-      padding-top: 50px;
-      padding-bottom: 35px;
+      padding: 50px 10px;
     }
 
     &--presentation {
-      padding-top: 70px;
-      padding-bottom: 70px;
+      padding-top: 66px;
+      padding-bottom: 75px;
     }
 
     &--success {
+      box-sizing: border-box;
+      width: 648px;
+      margin: 0 auto;
       padding-top: 60px;
-      padding-right: 115px;
-      padding-left: 115px;
+    }
+
+    &--wrong {
+      padding: 64px 20px 49px;
     }
   }
 
   .text-block__intro {
     &--hotels {
       display: inline-block;
+      width: 445px;
+      margin: 0 auto;
+      margin-bottom: 42px;
 
       vertical-align: middle;
     }
 
     &--success {
+      width: 420px;
+      margin: 0 auto;
+      margin-bottom: 40px;
       padding: 0;
+    }
+
+    &--wrong {
+      width: 281px;
+      margin: 0 auto;
+      margin-bottom: 40px;
     }
   }
 
   .text-block__title {
     font-size: 21px;
+
+    &--advantages {
+      margin-bottom: 27px;
+    }
 
     &--photo,
     &--doubt,
@@ -152,13 +177,50 @@
     }
 
     &--interest {
-      margin-bottom: 25px;
+      margin-bottom: 32px;
 
       font-size: 30px;
     }
 
     &--success {
       padding: 0;
+
+      font-size: 30px;
+    }
+
+    &--wrong {
+      width: 215px;
+      margin-bottom: 35px;
+
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .text-block {
+    &--photo {
+      padding-top: 115px;
+    }
+
+    &--hotels {
+      padding: 57px 20px 68px;
+    }
+
+    &--presentation {
+      padding-top: 70px;
+    }
+
+    &--form {
+      padding-top: 113px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .text-block__intro {
+    &--hotels {
+      margin-bottom: 46px;
     }
   }
 }

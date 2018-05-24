@@ -3,9 +3,8 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-
-  padding: 0;
   margin-bottom: 30px;
+  padding: 0;
 }
 
 .social__list {
@@ -27,6 +26,17 @@
   margin: 0;
 
   background-color: @color-main;
+
+  &:hover,
+  &:focus {
+    background-color: @color-main--hover;
+  }
+
+  &:active {
+    color: #99cccc;
+
+    background-color: @color-main--down;
+  }
 }
 
 .social__logo {
@@ -34,6 +44,10 @@
   text-align: center;
 
   fill: @white;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -1,22 +1,102 @@
 .presentation__video {
   position: relative;
 
-  min-height: 263px;
+  padding-bottom: 40px;
 }
 
 .presentation__img {
   display: block;
+  background-color: #fefefe;
 }
 
 .presentation__controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.presentation__range-controls {
   position: absolute;
-  bottom: 0;
+  bottom: 105px;
   left: 20px;
 
+  display: flex;
+  justify-content: center;
   width: 280px;
-  min-height: 66px;
+  padding: 21px 0;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.presentation__bar {
+  width: 236px;
+  height: 3px;
+
+  background-color: @white;
+  opacity: 0.2;
+}
+
+.presentation__toggle {
+  position: absolute;
+  bottom: 17px;
+  left: 58px;
+
+  width: 9px;
+  height: 9px;
+
+  background-color: @white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.presentation__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto;
+  padding: 22px 22px 23px;
 
   background-color: #f2f2f2;
+}
+
+.presentation__button-icon {
+  height: 20px;
+  padding: 0;
+
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &--replay {
+    width: 16px;
+    margin-right: auto;
+  }
+
+  &--subtitles {
+    width: 32px;
+    margin-right: 30px;
+  }
+
+  &--fullscreen {
+    width: 20px;
+  }
+}
+
+.presentation__icon {
+  fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -26,41 +106,147 @@
 
   .presentation__video {
     position: relative;
-  }
 
-  .presentation__img {
     width: 648px;
-    height: 503px;
     margin: 0 auto;
-    padding: 0 40px;
+    margin-bottom: 40px;
+    padding-bottom: 0;
   }
 
   .presentation__controls {
     position: absolute;
     bottom: 0;
-    left: 60px;
+    left: 0;
 
-    width: 648px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 100%;
     min-height: 94px;
+    padding: 0 40px 0 35px;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .presentation__range-controls {
+    position: absolute;
+    bottom: 45px;
+    left: 90px;
+
+    width: 395px;
+    padding: 0;
+
+    background-color: transparent;
+  }
+
+  .presentation__bar {
+    width: 395px;
+  }
+
+  .presentation__toggle {
+    top: -3px;
+    left: 115px;
+  }
+
+  .presentation__buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    padding-top: 35px;
+    padding-bottom: 25px;
+
+    background-color: transparent;
+  }
+
+  .presentation__icons {
+    padding: 0;
+
+    background-color: transparent;
+
+    &--replay {
+      width: 16px;
+    }
+
+    &--subtitles {
+      width: 32px;
+    }
+
+    &--fullscreen {
+      width: 20px;
+    }
+  }
+
+  .presentation__button-icon {
+    margin: 0;
+
+    background-color: transparent;
+
+    &--replay {
+      margin-right: auto;
+      padding: 0;
+    }
+
+    &--subtitles {
+      margin-right: 32px;
+    }
+  }
+
+  .presentation__icon {
+    fill: @white;
+  }
+
+  .presentation__icon,
+  .presentation__button-icon {
+    &:hover,
+    &:focus {
+      fill: @white;
+      fill-opacity: 0.6;
+    }
+
+    &:active {
+      fill: @white;
+      fill-opacity: 0.3;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .presentation__img {
+  .presentation__video {
     width: 800px;
-    height: 503px;
+    margin: 0 auto;
+    margin-bottom: 85px;
   }
 
   .presentation__controls {
     position: absolute;
     bottom: 0;
-    left: 200px;
+    left: 0;
 
-    width: 800px;
-    min-height: 94px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 
-    background-color: rgba(0, 0, 0, 0.3);
+  .presentation__button-icon {
+    &--replay {
+      right: 733px;
+    }
+  }
+
+  .presentation__bar {
+    width: 545px;
+
+    &::before {
+      content: "";
+      bottom: 27px;
+      left: 120px;
+    }
+
+    &::after {
+      left: 5px;
+
+      width: 540px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .feedback-form {
-  padding-bottom: 45px;
+  padding-bottom: 38px;
 }
 
 .feedback-form__list,
@@ -13,10 +13,7 @@
 .feedback-form__list--sights {
   position: relative;
 
-  margin-bottom: 10px;
-  padding: 16px 17px 27px 85px;
-
-  text-align: left;
+  margin-bottom: 25px;
 
   &:last-child {
     margin-bottom: 15px;
@@ -31,14 +28,17 @@
   font-size: 18px;
 
   &--impression {
+    margin-bottom: 35px;
+  }
+
+  &--textarea {
     margin-bottom: 20px;
   }
 
   &--sights {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
-  &--textarea,
   &--feedback {
     margin-bottom: 25px;
   }
@@ -48,15 +48,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
   width: 280px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   &--contact {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   &--textarea {
@@ -64,14 +63,17 @@
   }
 
   &--name {
-    width: 260px;
+    width: 280px;
   }
 }
 
 .feedback-form__field {
+  position: relative;
+
   flex-grow: 1;
+  box-sizing: border-box;
   min-width: 1px;
-  padding: 15px 20px;
+  padding: 15px 22px;
 
   font-weight: 700;
   font-size: 18px;
@@ -81,11 +83,77 @@
 
   background-color: #f2f2f2;
   border: none;
+  cursor: pointer;
 
   &::placeholder {
     font-weight: bold;
     font-size: 18px;
     color: @black;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: @white;
+    outline: none;
+    box-shadow: 0 0 0 3px #d6d6d6 inset;
+  }
+
+  &--contact {
+    width: 221px;
+  }
+}
+
+.feedback-form__input-wrapper {
+  position: relative;
+
+  width: 221px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -56px;
+
+    width: 56px;
+    height: 56px;
+
+    background-color: #e6e6e6;
+  }
+
+  &--phone {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: -39px;
+      z-index: 2;
+
+      width: 18px;
+      height: 18px;
+
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--email {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: -39px;
+      z-index: 2;
+
+      width: 18px;
+      height: 18px;
+
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -96,21 +164,38 @@
   }
 
   &--name {
-    margin-right: 5px;
+    margin-right: 16px;
+  }
+
+  &--checkbox {
+    display: flex;
+    align-items: center;
+    padding: 15px 17px 15px 80px;
+
+    outline: none;
   }
 }
 
 .feedback-form__line {
   position: relative;
 
-  padding: 16px 17px 27px 78px;
+  width: 100%;
+  margin-bottom: 42px;
+
+  &:last-child {
+    margin-bottom: 28px;
+  }
+}
+
+.feedback-form__input--checkbox {
+  display: none;
 }
 
 .feedback-form__input--radio + label::before {
   content: "";
   position: absolute;
-  bottom: 10px;
-  left: 5px;
+  bottom: -15px;
+  left: 0;
 
   display: inline-block;
   width: 55px;
@@ -121,13 +206,26 @@
 
   background-color: #f2f2f2;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.feedback-form__input--radio + label:hover::before,
+.feedback-form__input--checkbox + label:hover::before,
+.feedback-form__input--radio + label:focus::before,
+.feedback-form__input--checkbox + label:focus::before {
+  background-color: #e5e5e5;
+}
+
+.feedback-form__input--radio + label:active::before,
+.feedback-form__input--checkbox + label:active::before {
+  background-color: #d5d5d5;
 }
 
 .feedback-form__input--radio:checked + label::before {
   content: "";
   position: absolute;
-  bottom: 10px;
-  left: 5px;
+  bottom: -15px;
+  left: 0;
 
   display: inline-block;
   width: 22px;
@@ -141,20 +239,49 @@
   border-radius: 50%;
 }
 
+.feedback-form__input--radio:checked + label:hover::before,
+.feedback-form__input--radio:checked + label:focus::before {
+  border: 17px solid #e5e5e5;
+}
+
+.feedback-form__input--radio:checked + label:focus::before {
+  border: 17px solid #d5d5d5;
+}
+
+.feedback-form__input--radio:checked + label:active::before {
+  background-color: #a4a4a4;
+  border: 17px solid #d5d5d5;
+}
+
 .feedback-form__input--checkbox + label::before {
   content: "";
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
 
-  display: inline-block;
+  display: block;
   width: 55px;
   height: 55px;
 
-  vertical-align: middle;
-
   background-color: #f2f2f2;
   border-radius: 10%;
+  cursor: pointer;
+}
+
+.feedback-form__input--checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 17px;
+
+  width: 23px;
+  height: 16px;
+
+  background: url("../img/icon-tick.svg") no-repeat;
+}
+
+.feedback-form__input--checkbox:checked + label:active::after {
+  opacity: 0.3;
 }
 
 .feedback-form__list--container {
@@ -169,10 +296,16 @@
   text-transform: none;
 }
 
+.feedback-form__label--radio {
+  padding: 16px 17px 18px 78px;
+
+  outline: none;
+}
+
 .feedback-form__textarea {
   width: 275px;
-  min-height: 155px;
-  padding: 12px 17px;
+  min-height: 135px;
+  padding: 14px 20px;
 
   font-weight: 700;
   font-size: 18px;
@@ -182,6 +315,7 @@
 
   background-color: #f2f2f2;
   border: none;
+  cursor: pointer;
 
   resize: none;
 
@@ -190,6 +324,16 @@
     font-size: 18px;
     line-height: 26px;
     color: @black;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: @white;
+    outline: none;
+    box-shadow: 0 0 0 3px #d6d6d6 inset;
   }
 }
 
@@ -203,10 +347,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0 60px 30px;
+    width: 648px;
+    margin: 0 auto;
+    padding-bottom: 60px;
 
     &--bottom {
       display: flex;
@@ -218,54 +361,103 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+    align-content: space-between;
+    min-height: 158px;
+    margin: 0 auto;
+    padding: 0 40px 0 94px;
   }
 
   .feedback-form__list {
     &--sights {
-      box-sizing: border-box;
       width: 50%;
       margin: 0;
-      padding-left: 110px;
-
-      &:last-child {
-        margin: 0;
-      }
     }
   }
 
   .feedback-form__title {
+    width: 100%;
     margin-bottom: 48px;
 
     font-size: 21px;
 
     &--impression {
-      margin-bottom: 55px;
+      margin-bottom: 75px;
 
       text-align: left;
     }
 
     &--name {
-      margin-bottom: 55px;
+      margin-bottom: 58px;
 
       text-align: left;
     }
 
     &--contact {
-      margin: 0 auto;
-      margin-bottom: 25px;
-    }
+      position: relative;
 
-    &--contact::before {
+      width: 278px;
       margin: 0 auto;
       margin-bottom: 25px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: -185px;
+
+        width: 125px;
+        height: 1px;
+
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: -243px;
+
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 125px;
+        height: 1px;
+        margin-right: 60px;
+
+        background-color: #dbdbdb;
+      }
     }
 
     &--sights {
+      position: relative;
+
       width: 290px;
       margin: 0 auto;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: -180px;
+
+        width: 125px;
+        height: 1px;
+
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 24px;
+        right: -240px;
+
+        width: 125px;
+        height: 1px;
+        margin-right: 60px;
+
+        background-color: #dbdbdb;
+      }
     }
 
     &--feedback {
@@ -273,20 +465,54 @@
     }
 
     &--textarea {
+      position: relative;
+
       margin-bottom: 55px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 0;
+
+        width: 125px;
+        height: 1px;
+
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: -60px;
+
+        width: 125px;
+        height: 1px;
+        margin-right: 60px;
+
+        background-color: #dbdbdb;
+      }
     }
   }
 
   .feedback-form__input--checkbox + label::before {
     position: absolute;
     top: 0;
-    left: 30px;
+    left: 0;
+  }
 
-    margin-right: 20px;
+  .feedback-form__input--checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 19px;
   }
 
   .feedback-form__line {
-    padding-left: 35px;
+    margin-bottom: 50px;
+
+    text-align: left;
   }
 
   .feedback-form__label {
@@ -295,22 +521,56 @@
       align-items: center;
       margin: 0;
       padding: 0;
-      padding-right: 10px;
+      padding-right: 13px;
     }
 
     &--contact {
-      padding-left: 20px;
+      width: 168px;
+      margin-right: auto;
+      margin-bottom: 5px;
+      margin-left: 10px;
+      padding: 0;
+    }
+
+    &--phone {
+      margin-left: 17px;
+    }
+
+    &--checkbox {
+      padding-bottom: 15px;
+      padding-left: 83px;
+    }
+
+    &--radio {
+      padding-left: 75px;
     }
   }
 
-  .feedback-form__field--name {
-    flex-grow: 1;
-    overflow: hidden;
+  .feedback-form__field {
+    &--name {
+      flex-grow: 1;
+      padding: 15px 26px;
+      overflow: hidden;
+    }
+
+    &--contact {
+      box-sizing: border-box;
+      width: 592px;
+      padding: 17px 22px 15px;
+    }
   }
 
-  .feedback-form__field--contact {
-    box-sizing: border-box;
-    width: 648px;
+  .feedback-form__input-wrapper {
+    width: 592px;
+
+    &::before {
+      width: 58px;
+      height: 58px;
+    }
+
+    &::after {
+      right: -36px;
+    }
   }
 
   .feedback-form__obligatory {
@@ -323,20 +583,20 @@
 
   .feedback-form__item {
     &--textarea {
-      padding: 0;
       width: 648px;
+      padding: 0;
     }
 
     &--name {
-      box-sizing: border-box;
       width: 267px;
       margin: 0;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       padding: 0;
     }
 
     &--contact {
-      margin-bottom: 15px;
+      width: 648px;
+      margin-bottom: 27px;
       padding: 0;
     }
   }
@@ -359,35 +619,90 @@
 
   .feedback-form__textarea {
     width: 100%;
+    padding-top: 17px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .feedback-form {
-    padding-bottom: 70px;
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 68px;
   }
 
   .feedback-form--contact-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 960px;
   }
 
   .feedback-form__title {
     &--impression {
-      padding-left: 85px;
+      width: 320px;
+      margin: 0 auto;
+      margin-bottom: 75px;
+
+      text-align: left;
     }
 
     &--contact {
-      margin-bottom: 75px;
+      margin-bottom: 73px;
+
+      &::before {
+        content: "";
+        top: 11px;
+        left: -337px;
+
+        width: 280px;
+      }
+
+      &::after {
+        top: 11px;
+        right: -405px;
+
+        width: 280px;
+      }
+    }
+
+    &--sights {
+      width: 275px;
+      margin-bottom: 40px;
+
+      &::before {
+        top: 25px;
+        left: -338px;
+
+        width: 280px;
+      }
+
+      &::after {
+        top: 25px;
+        right: -407px;
+
+        width: 280px;
+      }
+    }
+
+    &--textarea {
+      &::before {
+        top: 11px;
+        left: 0;
+
+        width: 280px;
+      }
+
+      &::after {
+        top: 11px;
+        right: -60px;
+
+        width: 280px;
+      }
     }
   }
 
   .feedback-form__label {
     &--radio {
-      padding-right: 70px;
-      padding-left: 0;
+      padding: 20px 17px 15px 80px;
     }
 
     &--hide {
@@ -395,9 +710,8 @@
     }
 
     &--contact {
-      display: block;
+      width: 165px;
       margin: 0;
-      margin-right: 15px;
       padding: 0;
 
       text-align: left;
@@ -406,16 +720,28 @@
     &--checkbox {
       position: relative;
 
+      margin: 0;
+      padding: 15px 0 15px 80px;
+
       cursor: pointer;
+    }
+
+    &--phone {
+      width: 85px;
     }
   }
 
   .feedback-form__input--checkbox + label::before {
     position: absolute;
-    top: -13px;
-    left: -75px;
+    top: 0;
+    left: 0;
+  }
 
-    margin-right: 20px;
+  .feedback-form__input--checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 18px;
   }
 
   .feedback-form__field {
@@ -424,17 +750,22 @@
     }
 
     &--contact {
-      max-width: 318px;
+      width: 258px;
+    }
+
+    &--long {
+      padding-left: 22px;
     }
   }
 
   .feedback-form__item {
     &--contact {
+      display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      margin: 0;
       width: 480px;
+      margin: 0;
     }
 
     &--name {
@@ -446,21 +777,28 @@
     }
   }
 
-  .feedback-form__list--sights {
+  .feedback-form__input-wrapper {
+    width: 258px;
+
+    &::before {
+      width: 58px;
+      height: 58px;
+    }
+  }
+
+  .feedback-form__list--container {
     justify-content: space-between;
-    width: 25%;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .feedback-form__list--sights {
+    display: flex;
+    align-items: flex-start;
+    width: auto;
     margin: 0;
-    padding-left: 105px;
-
-    &:first-child {
-      padding-left: 80px;
-    }
-
-    &:last-child {
-      margin: 0;
-      padding-right: 0;
-      padding-left: 115px;
-    }
+    padding: 0;
   }
 
   .feedback-form__list--radio {
@@ -470,7 +808,7 @@
   .feedback-form__list--radio::after {
     content: "";
     position: absolute;
-    right: -60px;
+    right: 0;
     bottom: -15px;
 
     width: 1px;
@@ -481,5 +819,24 @@
 
   .feedback-form__textarea {
     width: 960px;
+    padding-bottom: 12px;
+  }
+
+  .feedback-form__input--radio + label::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 5px;
+
+    margin: 0;
+  }
+
+  .feedback-form__input--radio:checked + label::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 5px;
+
+    margin: 0;
   }
 }

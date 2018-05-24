@@ -6,20 +6,23 @@
   margin: 0 auto;
 
   background-color: @white;
-  box-shadow: 0 19px 10px -5px rgba(0, 1, 1, 0.15), 0 -10px 10px -5px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 19px 10px -5px rgba(0, 1, 1, 0.15),
+    0 -10px 10px -5px rgba(0, 1, 1, 0.15);
 
   &--wrong {
-    bottom: 230px;
-    left: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 104;
 
     display: none;
   }
 
   &--success {
-    bottom: 340px;
-    left: 40px;
+    top: 30%;
+    left: 50%;
     z-index: 104;
+    transform: translate(-50%, -50%);
 
     display: none;
   }
@@ -27,29 +30,31 @@
 
 @media (min-width: @tablet-width) {
   .popup {
+    box-shadow: 0 0 19px 0 rgba(0, 1, 1, 0.15);
+
     &--wrong {
-      left: 185px;
+      top: 50%;
+      left: 50%;
 
       width: 400px;
+
+      transform: translate(-50%, -50%);
     }
 
     &--success {
-      left: 60px;
+      top: 30%;
+      left: 50%;
 
       width: 648px;
+
+      transform: translateX(-324px);
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .popup {
-    &--wrong {
-      left: 400px;
-    }
-
     &--success {
-      left: 280px;
-
       width: 648px;
     }
   }
