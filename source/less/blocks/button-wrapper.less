@@ -1,0 +1,31 @@
+.button-wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  &--success {
+    padding: 25px 20px;
+
+    background-color: #f2f2f2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 648px;
+
+    &--success {
+      padding: 45px 96px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+  }
+}
