@@ -28,9 +28,16 @@
   }
 }
 
-.intro__image--index {
+.intro__image {
   margin: 0 auto;
-  margin-top: 90px;
+
+  &--index {
+    margin-top: 90px;
+  }
+
+  &--photo {
+    margin-top: 50px;
+  }
 }
 
 .intro--photo {
@@ -60,11 +67,6 @@
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
   }
-}
-
-.intro__image--photo {
-  margin: 0 auto;
-  margin-top: 50px;
 }
 
 @media (min-width: @tablet-width) {
