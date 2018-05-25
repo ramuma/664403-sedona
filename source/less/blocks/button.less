@@ -32,22 +32,14 @@
 
   &--wrong {
     width: 180px;
+
     font-size: 18px;
   }
 
   &--success {
     width: 280px;
+
     font-size: 18px;
-  }
-}
-
-.button__wrapper {
-  width: 280px;
-  margin: 0 auto;
-
-  &--success {
-    padding: 25px 20px;
-    background-color: #f2f2f2;
   }
 }
 
@@ -60,9 +52,9 @@
     }
 
     &--feedback {
+      box-sizing: content-box;
       width: 188px;
       padding: 16px 75px 16px 61px;
-      box-sizing: content-box;
     }
 
     &--wrong {
@@ -74,33 +66,14 @@
       margin: 0 auto;
     }
   }
-
-  .button__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 648px;
-
-    &--success {
-      padding: 45px 96px;
-    }
-  }
 }
 
 @media (min-width: @desktop-width) {
-  .button__wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 960px;
-  }
-
   .button {
     &--feedback {
-      //width: 480px;
-      //box-sizing: border-box;
+      box-sizing: content-box;
       width: 320px;
       padding: 16px 80px;
-      box-sizing: content-box;
     }
 
     &--hotels {

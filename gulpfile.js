@@ -60,7 +60,7 @@ gulp.task("images", function () {
 
 // Изображения в формате webp
 gulp.task("webp", function () {
-  return gulp.src(["source/img/**/main-*.{png,jpg}", "source/img/**/photo-*.{png,jpg}", "source/img/**/video-*.{png,jpg}"])
+  return gulp.src(["source/img/**/main-*.{png,jpg}", "source/img/**/bg-map-*.{png,jpg}", "source/img/**/photo-*.{png,jpg}", "source/img/**/video-*.{png,jpg}"])
     .pipe(webp({
       quality: 90
     }))

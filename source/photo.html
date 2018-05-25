@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона: фото и видео</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="/fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font" type="font/woff" crossorigin/>
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" type="font/woff" crossorigin/>
 </head>
 
 <body>
@@ -41,7 +41,7 @@
             <a class="main-nav__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--shadow" href="#">HTML Academy</a>
+            <a class="main-nav__link main-nav__link--shadow" href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
         </ul>
         <div class="main-nav__top">
@@ -57,8 +57,8 @@
 
     <main class="page-main">
       <h1 class="visually-hidden ">Седона</h1>
-      <div class="intro--photo">
-        <img class="intro__image--photo" src="img/text-sedona.svg" alt="Welcome to the gorgeous Sedona!" width="230" height="40">
+      <div class="intro intro--photo">
+        <img class="intro__image intro__image--photo" src="img/text-sedona.svg" alt="Welcome to the gorgeous Sedona!" width="230" height="40">
       </div>
       <section class="text-block text-block--photo">
         <h2 class="text-block__title title text-block__title--photo">Фото и видео</h2>
@@ -80,7 +80,7 @@
             </a>
             <div class="multimedia__description">
               <div class="multimedia__desc-wrapper">
-                <h3 class="multimedia__name">Неродные просторы</h3>
+                <h2 class="multimedia__name">Неродные просторы</h2>
                 <p class="multimedia__author">Автор фото: Борис</p>
               </div>
               <div class="multimedia__like-wrapper">
@@ -106,7 +106,7 @@
             </a>
             <div class="multimedia__description multimedia__description--small">
               <div class="multimedia__desc-wrapper">
-                <h3 class="multimedia__name">Местная растительность</h3>
+                <h2 class="multimedia__name">Местная растительность</h2>
                 <p class="multimedia__author">Автор фото: Сергей</p>
               </div>
               <div class="multimedia__like-wrapper">
@@ -132,7 +132,7 @@
             </a>
             <div class="multimedia__description multimedia__description--small">
               <div class="multimedia__desc-wrapper">
-                <h3 class="multimedia__name">Дорога на север</h3>
+                <h2 class="multimedia__name">Дорога на север</h2>
                 <p class="multimedia__author">Автор фото: Петр</p>
               </div>
               <div class="multimedia__like-wrapper">
@@ -158,7 +158,7 @@
             </a>
             <div class="multimedia__description multimedia__description--small">
               <div class="multimedia__desc-wrapper">
-                <h3 class="multimedia__name">Мост дьявола</h3>
+                <h2 class="multimedia__name">Мост дьявола</h2>
                 <p class="multimedia__author">Автор фото: Антон</p>
               </div>
               <div class="multimedia__like-wrapper">
@@ -175,37 +175,37 @@
       </section>
       <section class="presentation text-block text-block--presentation">
         <h2 class="text-block__title text-block__title--doubt">Все еще сомневаетесь?</h2>
-        <p class="text-block__intro--photo">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <p class="text-block__intro text-block__intro--photo">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
       </section>
-      <div class="presentation__video">
+      <div class="presentation presentation__video">
         <picture>
           <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-          <img class="presentation__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Фото моста">
+          <img class="presentation presentation__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Фото моста">
         </picture>
-        <div class="presentation__controls">
-          <div class="presentation__range-controls">
-            <div class="presentation__bar"></div>
-            <div class="presentation__toggle"></div>
+        <div class="presentation presentation__controls">
+          <div class="presentation presentation__range-controls">
+            <div class="presentation presentation__bar"></div>
+            <div class="presentation presentation__toggle"></div>
           </div>
-          <div class="presentation__buttons">
-            <button class="presentation__button-icon presentation__button-icon--replay" type="button">
-              <svg class="presentation__icon" width="16" height="20" aria-labelledby="replay">
+          <div class="presentation presentation__buttons">
+            <button class="presentation presentation__button-icon presentation__button-icon--replay" type="button">
+              <svg class="presentation presentation__icon" width="16" height="20" aria-labelledby="replay">
                 <title id="replay">Повторить</title>
                 <use xlink:href="#icon-video-replay"></use>
               </svg>
             </button>
-            <button class="presentation__button-icon presentation__button-icon--subtitles" type="button">
-              <svg class="presentation__icon" width="32" height="20" aria-labelledby="subtitles">
+            <button class="presentation presentation__button-icon presentation__button-icon--subtitles" type="button">
+              <svg class="presentation presentation__icon" width="32" height="20" aria-labelledby="subtitles">
                 <title id="subtitles">Субтитры</title>
                 <use xlink:href="#icon-video-subtitles"></use>
               </svg>
             </button>
-            <button class="presentation__button-icon presentation__button-icon--fullscreen" type="button">
-              <svg class="presentation__icon" width="20" height="20" aria-labelledby="fullscreen">
+            <button class="presentation presentation__button-icon presentation__button-icon--fullscreen" type="button">
+              <svg class="presentation presentation__icon" width="20" height="20" aria-labelledby="fullscreen">
                 <title id="fullscreen">Полный экран</title>
                 <use xlink:href="#icon-video-fullscreen"></use>
               </svg>
@@ -250,8 +250,8 @@
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive ">
-            <svg class="copyright__icon" width="27" height="34" aria-labelledby="icon-htmlacademy">
-              <title id="icon-htmlacademy">HTMLAcademy</title>
+            <svg class="copyright__icon" width="27" height="34" aria-labelledby="htmlacademy-icon">
+                <title id="htmlacademy-icon">HTMLAcademy</title>
               <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
@@ -260,9 +260,7 @@
     </footer>
   </div>
   <script>
-    // Picture element HTML5 shiv
     document.createElement("picture");
-
   </script>
   <script src="js/picturefill.min.js" async></script>
 </body>

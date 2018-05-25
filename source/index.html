@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона: главная</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="/fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font" type="font/woff" crossorigin/>
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" type="font/woff" crossorigin/>
 </head>
 
 <body>
@@ -24,6 +24,7 @@
         </picture>
       </a>
       <nav class="main-nav">
+        <!-- main-nav__js-close -->
         <button class="main-nav__button main-nav__button--close" type="button">
           <svg class="main-nav__icon-cross" width="23" height="23" aria-labelledby="close">
             <title id="close"></title>
@@ -41,10 +42,11 @@
             <a class="main-nav__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--shadow" href="#">HTML Academy</a>
+            <a class="main-nav__link main-nav__link--shadow" href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
         </ul>
         <div class="main-nav__top">
+          <!-- main-nav__js-open -->
           <button class="main-nav__button main-nav__button--toggle" type="button">
             <svg class="main-nav__icon-menu" width="23" height="22" aria-labelledby="open">
               <title id="open"></title>
@@ -57,8 +59,9 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
-      <div class="intro--index">
-        <img class="intro__image--index" src="img/text-sedona-index.svg" alt="Welcome to the gorgeous Sedona!" width="280" height="212">
+      <div class="intro intro--index">
+        <img class="intro__image intro__image--index" src="img/text-sedona-index.svg" alt="Welcome to the gorgeous Sedona!" width="280"
+          height="212">
       </div>
       <section class="text-block text-block--advantages">
         <h2 class="text-block__title text-block__title--advantages">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -67,7 +70,7 @@
       <section class="advantages-list">
         <div class="advantages-list__container">
           <div class="advantages-list__item advantages-list__item--true">
-            <h3 class="advantages-list__title">Настоящий городок</h3>
+            <h2 class="advantages-list__title">Настоящий городок</h2>
             <p class="advantages-list__number">&ndash; №1 &ndash;</p>
             <p class="advantages-list__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
@@ -93,7 +96,8 @@
             <li class="advice__item advice__item--souvenirs">
               <h3 class="advice__title advice__title--souvenirs">Сувениры</h3>
               <p class="advice__description advice__description--souvenirs">
-                <span class="advice__description--break">Не только китайского,</span> но и местного производства!</p>
+                <span class="advice__description advice__description--break">Не только китайского,</span> но и местного производства!
+              </p>
             </li>
             <li class="advice__item advice__item--food">
               <h3 class="advice__title advice__title--food">Еда</h3>
@@ -103,7 +107,7 @@
         </section>
         <div class="advantages-list__container">
           <div class="advantages-list__item advantages-list__item--bridge">
-            <h3 class="advantages-list__title advantages-list__title--bridge">Там есть мост&#160;Дьявола</h3>
+            <h2 class="advantages-list__title advantages-list__title--bridge">Там есть мост&#160;Дьявола</h2>
             <p class="advantages-list__number">&ndash; №2 &ndash;</p>
             <p class="advantages-list__description advantages-list__description--bridge">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
@@ -121,17 +125,17 @@
         </div>
         <div class="advantages-list__container advantages-list__container--grey">
           <div class="advantages-list__item advantages-list__item--small">
-            <h3 class="advantages-list__title">Небольшая площадь</h3>
+            <h2 class="advantages-list__title">Небольшая площадь</h2>
             <p class="advantages-list__number">&ndash; №3 &ndash;</p>
             <p class="advantages-list__description advantages-list__description--small">Все интересные места находятся очень близко</p>
           </div>
           <div class="advantages-list__item advantages-list__item--road">
-            <h3 class="advantages-list__title">Красивая дорога</h3>
+            <h2 class="advantages-list__title">Красивая дорога</h2>
             <p class="advantages-list__number">&ndash; №4 &ndash;</p>
             <p class="advantages-list__description advantages-list__description--road">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="advantages-list__item advantages-list__item--empty">
-            <h3 class="advantages-list__title">Мало туристов</h3>
+            <h2 class="advantages-list__title">Мало туристов</h2>
             <p class="advantages-list__number">&ndash; №5 &ndash;</p>
             <p class="advantages-list__description">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
@@ -141,7 +145,7 @@
       <section class="text-block text-block--hotels">
         <h2 class="text-block__title text-block__title--interest">Заинтересовались?</h2>
         <p class="text-block__intro text-block__intro--hotels">Укажите предполагаемые даты поездки, и&#160;мы&#160;покажем&#160;вам&#160;лучшие предложения гостиниц в Седоне</p>
-        <a class="button button--hotels" href="#hotels ">Найти гостиницу</a>
+        <a class="button button--hotels" href="https://hotels.com/">Найти гостиницу</a>
       </section>
 
       <section class="map" id="map-canvas">
@@ -191,8 +195,8 @@
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive ">
-            <svg class="copyright__icon" width="27" height="34" aria-labelledby="icon-htmlacademy">
-              <title id="icon-htmlacademy">HTMLAcademy</title>
+            <svg class="copyright__icon" width="27" height="34" aria-labelledby="htmlacademy-icon">
+              <title id="htmlacademy-icon">HTMLAcademy</title>
               <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
@@ -203,7 +207,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
   <script src="js/map.js"></script>
   <script>
-    // Picture element HTML5 shiv
     document.createElement("picture");
 
   </script>
